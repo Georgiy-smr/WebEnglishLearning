@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Фрукты</title>
+	<title>Слова</title>
 	<style>
         body {
             font-family: Arial, sans-serif;
@@ -16,14 +16,13 @@
     </style>
 </head>
 <body>
-<h1>Получить список фруктов</h1>
-<button id="getWordsButton">Получить фрукты</button>
+<h1>Получить список слов</h1>
+<button id="getWordsButton">Получить</button>
 <div id="wordsList"></div>
 <script>
-    
     document.getElementById('getWordsButton').addEventListener('click', function () {
         fetch('https://192.168.0.105:7041/Words') // Замените URL на ваш API
-            .then(response => {
+            .then(response => { 
                 if (!response.ok) {
                     throw new Error('Сеть ответила с ошибкой: ' + response.status);
                 }
@@ -34,7 +33,7 @@
                 wordListDiv.innerHTML = ''; // Очищаем предыдущий список
                 data.forEach(word => {
                     const wordItem = document.createElement('div');
-                    wordItem.textContent = word;
+                    wordItem.textContent = word.englishWord + "-" + word.russianWord;
                     wordListDiv.appendChild(wordItem);
                 });
             })
@@ -42,7 +41,6 @@
                 console.error('Произошла ошибка:', error);
             });
     });
-    
 </script>
 </body>
 </html>

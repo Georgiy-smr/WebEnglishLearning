@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<title>Проверка слова</title>
+</head>
+<body>
+<h1>Проверка слова</h1>
+<button id="checkButton">Проверить</button>
+<div id="wordsList"></div>
+
+<script>
+        document.getElementById('checkButton').addEventListener('click', function () {
+            fetch('https://192.168.0.105:7041/Words/TestWord', {
+                method: "PUT", // поменяли на PUT
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    englishWord: "Tom",
+                    russianWord: "Том"
+                })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Ошибка сети: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(result => {
+                    // result — это true или false
+                    document.getElementById('wordsList').textContent = 'Результат проверки: ' + result;
+                })
+                .catch(error => {
+                    document.getElementById('wordsList').textContent = 'Произошла ошибка: ' + error.message;
+                });
+        });
+    </script>
+</body>
+</html>
