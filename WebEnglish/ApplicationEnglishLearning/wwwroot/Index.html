@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Фрукты</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #fruitsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Получить список фруктов</h1>
+<button id="getFruitsButton">Получить фрукты</button>
+<div id="fruitsList"></div>
+<script>
+    
+    document.getElementById('getFruitsButton').addEventListener('click', function () {
+        fetch('https://192.168.0.105:7041/Words') // Замените URL на ваш API
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Сеть ответила с ошибкой: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const fruitsListDiv = document.getElementById('fruitsList');
+                fruitsListDiv.innerHTML = ''; // Очищаем предыдущий список
+                data.forEach(fruit => {
+                    const fruitItem = document.createElement('div');
+                    fruitItem.textContent = fruit;
+                    fruitsListDiv.appendChild(fruitItem);
+                });
+            })
+            .catch(error => {
+                console.error('Произошла ошибка:', error);
+            });
+    });
+    
+</script>
+</body>
+</html>
+

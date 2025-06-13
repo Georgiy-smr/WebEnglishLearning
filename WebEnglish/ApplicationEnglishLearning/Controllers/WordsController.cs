@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.Collections.ObjectModel;
 using System.Runtime.InteropServices;
 using ApplicationEnglishLearning.Models;
 using ApplicationEnglishLearning.Validate;
@@ -11,7 +12,7 @@ namespace ApplicationEnglishLearning.Controllers
     [Route("[controller]")]
     public class WordsController : ControllerBase
     {
-        private static readonly ConcurrentDictionary<string, string> Summaries = new(
+        private readonly ConcurrentDictionary<string, string> _summaries = new(
             new Dictionary<string, string>()
         {
             {"Freezing", "Обледенение"}, {"Bracing","Укрепление"}, { "Chilly", "Прохладно" }, { "Cool", "Холод" }, { "Mild", "Мягкий" }, { "Warm", "Теплый" }, { "Balmy", "Нежный" }, { "Hot", "Горячий" }, { "Sweltering", "Изнуряющий" }, { "Scorching", "Палящий" }
@@ -24,24 +25,33 @@ namespace ApplicationEnglishLearning.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWords")]
-        public IEnumerable<WordFromDictionary> Get()
+        [HttpGet(Name = "words")]
+        public ActionResult<IEnumerable<WordFromDictionary>> Index()
         {
-            return Summaries.Select(x => new WordFromDictionary(x.Key, x.Value));
+            _logger.LogInformation(message: "HELLO WORLD!");
+
+            return Ok(_summaries.Select(x => new WordFromDictionary(x.Key, x.Value)));
         }
+
+
+        //[HttpGet(Name = "GetWords")]
+        //public IEnumerable<WordFromDictionary> Get()
+        //{
+        //    return _summaries.Select(x => new WordFromDictionary(x.Key, x.Value));
+        //}
 
         [HttpGet("GetTestedWords/{count}")]
         public IEnumerable<WordToTest> Get(int count)
         {
-            var countAllWords = Summaries.Count();
+            var countAllWords = _summaries.Count();
 
-            var trueEngToRus = Summaries.ElementAt(Random.Shared.Next(countAllWords));
+            var trueEngToRus = _summaries.ElementAt(Random.Shared.Next(countAllWords));
 
             List<WordToTest> words = new List<WordToTest>() { new(trueEngToRus.Key, trueEngToRus.Value) };
 
             while (words.Count < count)
             { 
-                var engToRus = Summaries.ElementAt(Random.Shared.Next(countAllWords));
+                var engToRus = _summaries.ElementAt(Random.Shared.Next(countAllWords));
                 if(words.Any(x=> x.RussianWord == engToRus.Value))
                     continue;
                 words.Add(new(trueEngToRus.Key, engToRus.Value));
@@ -63,7 +73,7 @@ namespace ApplicationEnglishLearning.Controllers
                 return BadRequest(ModelState);
             }
              
-            return Summaries.TryAdd(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord) ? Ok(wordFromDictionary) :
+            return _summaries.TryAdd(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord) ? Ok(wordFromDictionary) :
                 BadRequest("This wordFromDictionary is contains in dictionary");
         }
 
@@ -74,7 +84,7 @@ namespace ApplicationEnglishLearning.Controllers
             {
                 return BadRequest(ModelState);
             }
-            if (Summaries.TryGetValue(wordToTest.EnglishWord, out var expectedWord))
+            if (_summaries.TryGetValue(wordToTest.EnglishWord, out var expectedWord))
             {
                 var tested = wordToTest.RussianWord.ToLower();
                 var expected = expectedWord.ToLower();

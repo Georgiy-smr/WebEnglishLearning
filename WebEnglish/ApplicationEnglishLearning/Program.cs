@@ -1,7 +1,16 @@
-using ApplicationEnglishLearning.Controllers;
 using ApplicationEnglishLearning.Validate;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.WebHost.UseKestrel(options =>
+{
+    options.ListenAnyIP(5000); // HTTP
+    options.ListenAnyIP(7041, listenOptions => // HTTPS
+    {
+        listenOptions.UseHttps(); // Используйте сертификат по умолчанию
+    });
+});
 
 // Add services to the container.
 
@@ -10,6 +19,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ValidateWordFilter>();
+
 
 var app = builder.Build();
 
@@ -20,10 +30,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.UseStaticFiles();
+
+app.Run("https://0.0.0.0:7041");
