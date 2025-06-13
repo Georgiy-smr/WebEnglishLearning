@@ -10,18 +10,18 @@
             margin: 20px;
         }
 
-        #fruitsList {
+        #wordsList {
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
 <h1>Получить список фруктов</h1>
-<button id="getFruitsButton">Получить фрукты</button>
-<div id="fruitsList"></div>
+<button id="getWordsButton">Получить фрукты</button>
+<div id="wordsList"></div>
 <script>
     
-    document.getElementById('getFruitsButton').addEventListener('click', function () {
+    document.getElementById('getWordsButton').addEventListener('click', function () {
         fetch('https://192.168.0.105:7041/Words') // Замените URL на ваш API
             .then(response => {
                 if (!response.ok) {
@@ -30,12 +30,12 @@
                 return response.json();
             })
             .then(data => {
-                const fruitsListDiv = document.getElementById('fruitsList');
-                fruitsListDiv.innerHTML = ''; // Очищаем предыдущий список
-                data.forEach(fruit => {
-                    const fruitItem = document.createElement('div');
-                    fruitItem.textContent = fruit;
-                    fruitsListDiv.appendChild(fruitItem);
+                const wordListDiv = document.getElementById('wordsList');
+                wordListDiv.innerHTML = ''; // Очищаем предыдущий список
+                data.forEach(word => {
+                    const wordItem = document.createElement('div');
+                    wordItem.textContent = word;
+                    wordListDiv.appendChild(wordItem);
                 });
             })
             .catch(error => {
