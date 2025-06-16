@@ -16,61 +16,116 @@
     </style>
 </head>
 <body>
+
 <h1>Получить задание с переводом</h1>
-<button id="getWordsButton">Получить</button>
-<div id="wordsList"></div>
-<button id="checkButton">Ответить</button>
-<h1>Результат</h1>
-<div id="resultDiv"></div>
+
+<button id="loadTest">Получить задание</button>
+
+<div id="testContainer"></div>
+
+<button id="sendAnswer" disabled>Отправить ответ</button>
+
+<div id="response"></div>
 <script>
-        document.getElementById('getWordsButton').addEventListener('click', function () {
-            fetch('https://192.168.1.135:7041/Words/GetTestedWords/4') // Замените URL на ваш API
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Сеть ответила с ошибкой: ' + response.status);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const wordListDiv = document.getElementById('wordsList');
-                    wordListDiv.innerHTML = ''; // Очищаем предыдущий список
-                    data.forEach(word => {
-                        const wordItem = document.createElement('div');
-                        wordItem.textContent = word.englishWord + "-" + word.russianWord;
-                        wordListDiv.appendChild(wordItem);
-                    });
-                })
-                .catch(error => {
-                    console.error('Произошла ошибка:', error);
-                });
-        });
-        document.getElementById('checkButton').addEventListener('click', function () {
-            fetch('https://192.168.1.135:7041/Words/TestWord', {
-                method: "PUT",
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    englishWord: "Tom",
-                    russianWord: "Том"
-                })
+    let currentEnglishWord = '';
+    let selectedRussianWord = '';
+
+    document.getElementById('loadTest').addEventListener('click', () => {
+        fetch('https://192.168.1.135:7041/Words/GetTestedWords/4')
+            .then(res => {
+                if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
+                return res.json();
             })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Ошибка сети: ' + response.status);
-                    }
-                    return response.json();
-                })
-                .then(result => {
-                    // result — это true или false
-                    document.getElementById('resultDiv').textContent = 'Результат проверки: ' + result;
-                })
-                .catch(error => {
-                    document.getElementById('resultDiv').textContent = 'Произошла ошибка: ' + error.message;
+            .then(data => {
+                // data — массив объектов с englishWord и russianWord,
+                // например:
+                // [{englishWord: "Red", russianWord: "Красный"}, {englishWord: "Red", russianWord: "Черный"}, ...]
+
+                if (data.length === 0) {
+                    alert('Нет слов для теста');
+                    return;
+                }
+
+                currentEnglishWord = data[0].englishWord; // все одинаковы
+
+                const container = document.getElementById('testContainer');
+                container.innerHTML = ''; // очистить
+
+
+                console.log("Обработка данных с сервера");
+
+                // Покажем английское слово
+                const engTitle = document.createElement('h3');
+                engTitle.textContent = `Выберите перевод для слова "${currentEnglishWord}":`;
+                container.appendChild(engTitle);
+
+                // Создадим радиокнопки для вариантов
+                data.forEach((item, index) => {
+                    const label = document.createElement('label');
+                    label.style.display = 'block';
+                    label.style.marginBottom = '5px';
+
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = 'translation';
+                    radio.value = item.russianWord;
+                    radio.id = 'option_' + index;
+
+                    //изменить активность кнопки
+                    radio.addEventListener('change', () => {
+                        selectedRussianWord = radio.value;
+                        document.getElementById('sendAnswer').disabled = false;
+                    });
+
+                    label.appendChild(radio);
+
+                    const labelText = document.createTextNode(' ' + item.russianWord);
+                    label.appendChild(labelText);
+
+                    container.appendChild(label);
                 });
-        });
-    </script>
+
+                // Сброс ответа и кнопки
+                selectedRussianWord = '';
+                document.getElementById('sendAnswer').disabled = true;
+                document.getElementById('response').textContent = '';
+            })
+            .catch(err => {
+                alert('Ошибка при загрузке данных: ' + err.message);
+            });
+    });
+    document.getElementById('sendAnswer').addEventListener('click', () => {
+        if (!selectedRussianWord) {
+            alert('Пожалуйста, выберите перевод');
+            return;
+        }
+        fetch('https://192.168.1.135:7041/Words/TestWord', {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                englishWord: currentEnglishWord,
+                russianWord: selectedRussianWord
+            })
+        })
+            .then(res => {
+                if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
+                return res.json();
+            })
+            .then(result => {
+                document.getElementById('response').textContent = 'Ответ отправлен. Результат: ' + JSON.stringify(result);
+
+                // Можно сразу загрузить новое задание, если нужно
+                // document.getElementById('loadTest').click();
+            })
+            .catch(err => {
+                document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
+            });
+    });
+    
+</script>
 </body>
 </html>
 
