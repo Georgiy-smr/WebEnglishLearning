@@ -21,7 +21,7 @@
 <div id="wordsList"></div>
 <script>
     document.getElementById('getWordsButton').addEventListener('click', function () {
-        fetch('https://192.168.0.105:7041/Words') // Замените URL на ваш API
+        fetch('https://192.168.1.135:7041/Words') // Замените URL на ваш API
             .then(response => { 
                 if (!response.ok) {
                     throw new Error('Сеть ответила с ошибкой: ' + response.status);

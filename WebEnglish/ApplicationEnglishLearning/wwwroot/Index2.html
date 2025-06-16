@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Слова</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #wordsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Получить задание с переводом</h1>
+<button id="getWordsButton">Получить</button>
+<div id="wordsList"></div>
+<button id="checkButton">Ответить</button>
+<h1>Результат</h1>
+<div id="resultDiv"></div>
+<script>
+        document.getElementById('getWordsButton').addEventListener('click', function () {
+            fetch('https://192.168.1.135:7041/Words/GetTestedWords/4') // Замените URL на ваш API
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Сеть ответила с ошибкой: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const wordListDiv = document.getElementById('wordsList');
+                    wordListDiv.innerHTML = ''; // Очищаем предыдущий список
+                    data.forEach(word => {
+                        const wordItem = document.createElement('div');
+                        wordItem.textContent = word.englishWord + "-" + word.russianWord;
+                        wordListDiv.appendChild(wordItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Произошла ошибка:', error);
+                });
+        });
+        document.getElementById('checkButton').addEventListener('click', function () {
+            fetch('https://192.168.1.135:7041/Words/TestWord', {
+                method: "PUT",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    englishWord: "Tom",
+                    russianWord: "Том"
+                })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Ошибка сети: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(result => {
+                    // result — это true или false
+                    document.getElementById('resultDiv').textContent = 'Результат проверки: ' + result;
+                })
+                .catch(error => {
+                    document.getElementById('resultDiv').textContent = 'Произошла ошибка: ' + error.message;
+                });
+        });
+    </script>
+</body>
+</html>
+
