@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Слова</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #wordsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Создать слово</h1>
+<h2>Слово на английском</h2>
+<input id="engWord" />
+<h2>Русский перевод</h2>
+<input id="rusWord" />
+<div>
+	<h2></h2>
+	<button id="createButton">
+		Добавить
+	</button>
+</div>
+<div id="response">
+
+</div>
+<script>
+    let engWordContent = "";
+    let rusWordContent = "";
+
+    document.getElementById('createButton').addEventListener('click', () => {
+
+        engWordContent = document.getElementById('engWord').value;
+        if (!engWordContent) {
+            alert('Пожалуйста, введите английское слово!');
+            return;
+        }
+
+        rusWordContent = document.getElementById('rusWord').value;
+        if (!rusWordContent) {
+            alert('Пожалуйста, введите перевод слова!');
+            return;
+        }
+        fetch('https://192.168.1.135:7041/Words/CreateWord', {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                englishWord: engWordContent,
+                russianWord: rusWordContent
+            })
+        }).then(res => {
+            if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
+            return res.json();
+        }).then(result => {
+            document.getElementById('response').textContent = 'Ответ отправлен. Результат: \n' + JSON.stringify(result);
+        }).catch(err => {
+            document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
+        });
+    });
+</script>
+</body>
+</html>
+

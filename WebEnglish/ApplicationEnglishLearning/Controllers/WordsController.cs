@@ -72,8 +72,12 @@ namespace ApplicationEnglishLearning.Controllers
             {
                 return BadRequest(ModelState);
             }
-             
-            return _summaries.TryAdd(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord) ? Ok(wordFromDictionary) :
+
+
+            var resultAdd = _summaries.TryAdd(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord);
+
+
+            return resultAdd ? Ok(wordFromDictionary) :
                 BadRequest("This wordFromDictionary is contains in dictionary");
         }
 
