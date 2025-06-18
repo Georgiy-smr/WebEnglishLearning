@@ -2,6 +2,7 @@ using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
 using System.Runtime.InteropServices;
 using ApplicationEnglishLearning.Models;
+using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
 using Microsoft.AspNetCore.Mvc;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -12,38 +13,38 @@ namespace ApplicationEnglishLearning.Controllers
     [Route("[controller]")]
     public class WordsController : ControllerBase
     {
-        private readonly ConcurrentDictionary<string, string> _summaries = new(
-            new Dictionary<string, string>()
-        {
-            {"Freezing", "Обледенение"}, {"Bracing","Укрепление"}, { "Chilly", "Прохладно" }, { "Cool", "Холод" }, { "Mild", "Мягкий" }, { "Warm", "Теплый" }, { "Balmy", "Нежный" }, { "Hot", "Горячий" }, { "Sweltering", "Изнуряющий" }, { "Scorching", "Палящий" }
-        });
+        private readonly ITranslateDictionary<string, string> _translateDictionary;
 
         private readonly ILogger<WordsController> _logger;
 
-        public WordsController(ILogger<WordsController> logger)
+        public WordsController(ILogger<WordsController> logger,
+            ITranslateDictionary<string, string> translateDictionary)
         {
             _logger = logger;
+            _translateDictionary = translateDictionary;
         }
 
         [HttpGet(Name = "words")]
         public ActionResult<IEnumerable<WordFromDictionary>> Index()
         {
-            return Ok(_summaries.Select(x => new WordFromDictionary(x.Key, x.Value)));
+            return Ok(_translateDictionary.Get().Select(x => new WordFromDictionary(x.Key, x.Value)));
         }
 
 
         [HttpGet("GetTestedWords/{count}")]
         public IEnumerable<WordToTest> Get(int count)
         {
-            var countAllWords = _summaries.Count();
+            var collectionWords = _translateDictionary.Get();
 
-            var trueEngToRus = _summaries.ElementAt(Random.Shared.Next(countAllWords));
+            var countAllWords = collectionWords.Count();
+
+            var trueEngToRus = collectionWords.ElementAt(Random.Shared.Next(countAllWords));
 
             List<WordToTest> words = new List<WordToTest>() { new(trueEngToRus.Key, trueEngToRus.Value) };
 
             while (words.Count < count)
             { 
-                var engToRus = _summaries.ElementAt(Random.Shared.Next(countAllWords));
+                var engToRus = collectionWords.ElementAt(Random.Shared.Next(countAllWords));
                 if(words.Any(x=> x.RussianWord == engToRus.Value))
                     continue;
                 words.Add(new(trueEngToRus.Key, engToRus.Value));
@@ -66,7 +67,7 @@ namespace ApplicationEnglishLearning.Controllers
             }
 
 
-            var resultAdd = _summaries.TryAdd(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord);
+            var resultAdd = _translateDictionary.TryAdd(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord);
 
 
             return resultAdd ? Ok(wordFromDictionary) :
@@ -82,7 +83,7 @@ namespace ApplicationEnglishLearning.Controllers
                 return BadRequest(ModelState);
             }
 
-            var resultAdd = _summaries.TryRemove(new KeyValuePair<string, string>(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord));
+            var resultAdd = _translateDictionary.TryRemove(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord);
             return resultAdd ? Ok(wordFromDictionary) :
                 BadRequest("This wordFromDictionary is contains in dictionary");
         }
@@ -95,7 +96,7 @@ namespace ApplicationEnglishLearning.Controllers
             {
                 return BadRequest(ModelState);
             }
-            if (_summaries.TryGetValue(wordToTest.EnglishWord, out var expectedWord))
+            if (_translateDictionary.TryGetValue(wordToTest.EnglishWord, out var expectedWord))
             {
                 var tested = wordToTest.RussianWord.ToLower();
                 var expected = expectedWord.ToLower();

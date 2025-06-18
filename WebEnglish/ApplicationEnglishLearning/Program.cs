@@ -1,3 +1,4 @@
+using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ValidateWordFilter>();
-
+builder.Services.AddSingleton<ITranslateDictionary<string, string>, TranslateCollection>();
 
 var app = builder.Build();
 
