@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Слова</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #wordsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Получить список слов</h1>
+<button id="getWordsButton">Получить</button>
+<div id="wordsList"></div>
+<button id="deleteButton">
+    Удалить
+</button>
+<script>
+    let currentEnglishWord = '';
+    let currrentRussianWord = '';
+    document.getElementById('getWordsButton').addEventListener('click', function () {
+        fetch('https://192.168.1.125:7041/Words') // Замените URL на ваш API
+            .then(response => { 
+                if (!response.ok) {
+                    throw new Error('Сеть ответила с ошибкой: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const container = document.getElementById('wordsList');
+                container.innerHTML = ''; // Очищаем предыдущий список
+
+                // Создадим радиокнопки для вариантов
+                data.forEach((item, index) => {
+                    const label = document.createElement('label');
+                    label.style.display = 'block';
+                    label.style.marginBottom = '5px';
+
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = 'translation';
+                    radio.value = item.englishWord + '→' + item.russianWord;
+                    radio.id = 'option_' + index;
+
+                    //изменить активность кнопки
+                    radio.addEventListener('change', () => {
+
+                        const contextRadio = radio.value.split('→');
+                        currentEnglishWord = contextRadio[0];
+                        currrentRussianWord = contextRadio[1];
+                        document.getElementById('deleteButton').disabled = false;
+                    });
+
+                    label.appendChild(radio);
+
+                    const labelText = document.createTextNode(' ' + radio.value);
+                    label.appendChild(labelText);
+
+
+                    container.appendChild(label);
+                });
+
+                // Сброс ответа и кнопки
+                currentEnglishWord = '';
+                currrentRussianWord = '';
+                document.getElementById('deleteButton').disabled = true;
+            })
+            .catch(error => {
+                console.error('Произошла ошибка:', error);
+            });
+    });
+
+</script>
+</body>
+</html>
+

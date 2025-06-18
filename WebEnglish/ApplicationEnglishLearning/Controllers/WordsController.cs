@@ -28,17 +28,9 @@ namespace ApplicationEnglishLearning.Controllers
         [HttpGet(Name = "words")]
         public ActionResult<IEnumerable<WordFromDictionary>> Index()
         {
-            _logger.LogInformation(message: "HELLO WORLD!");
-
             return Ok(_summaries.Select(x => new WordFromDictionary(x.Key, x.Value)));
         }
 
-
-        //[HttpGet(Name = "GetWords")]
-        //public IEnumerable<WordFromDictionary> Get()
-        //{
-        //    return _summaries.Select(x => new WordFromDictionary(x.Key, x.Value));
-        //}
 
         [HttpGet("GetTestedWords/{count}")]
         public IEnumerable<WordToTest> Get(int count)
@@ -80,6 +72,21 @@ namespace ApplicationEnglishLearning.Controllers
             return resultAdd ? Ok(wordFromDictionary) :
                 BadRequest("This wordFromDictionary is contains in dictionary");
         }
+
+        [HttpDelete("DeleteWord")]
+        [ServiceFilter(typeof(ValidateWordFilter))]
+        public IActionResult Delete([FromBody] WordFromDictionary wordFromDictionary)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var resultAdd = _summaries.TryRemove(new KeyValuePair<string, string>(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord));
+            return resultAdd ? Ok(wordFromDictionary) :
+                BadRequest("This wordFromDictionary is contains in dictionary");
+        }
+
 
         [HttpPut("TestWord")]
         public IActionResult PostTestWord([FromBody] WordToTest wordToTest)

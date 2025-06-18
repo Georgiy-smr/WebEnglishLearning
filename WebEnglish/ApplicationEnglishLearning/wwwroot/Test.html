@@ -31,15 +31,14 @@
     let selectedRussianWord = '';
 
     document.getElementById('loadTest').addEventListener('click', () => {
-        fetch('https://192.168.1.135:7041/Words/GetTestedWords/4')
+
+        fetch('https://192.168.1.125:7041/Words/GetTestedWords/4')
             .then(res => {
                 if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
                 return res.json();
             })
             .then(data => {
-                // data — массив объектов с englishWord и russianWord,
-                // например:
-                // [{englishWord: "Red", russianWord: "Красный"}, {englishWord: "Red", russianWord: "Черный"}, ...]
+
 
                 if (data.length === 0) {
                     alert('Нет слов для теста');
@@ -99,7 +98,7 @@
             alert('Пожалуйста, выберите перевод');
             return;
         }
-        fetch('https://192.168.1.135:7041/Words/TestWord', {
+        fetch('https://192.168.1.125:7041/Words/TestWord', {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
