@@ -31,3 +31,4 @@ C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ApplicationEnglishLear
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\obj\Debug\net8.0\ApplicationEnglishLearning.pdb
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\obj\Debug\net8.0\ApplicationEnglishLearning.genruntimeconfig.cache
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\obj\Debug\net8.0\ref\ApplicationEnglishLearning.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\ApplicationEnglishLearning.staticwebassets.runtime.json

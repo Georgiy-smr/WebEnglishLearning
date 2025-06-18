@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
+      "PackagePath": "staticwebassets\\Create.html"
+    },
+    {
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
+      "PackagePath": "staticwebassets\\GetAll.html"
+    },
+    {
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
+      "PackagePath": "staticwebassets\\Test.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ApplicationEnglishLearning.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ApplicationEnglishLearning.props",
+      "PackagePath": "build\\ApplicationEnglishLearning.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ApplicationEnglishLearning.props",
+      "PackagePath": "buildMultiTargeting\\ApplicationEnglishLearning.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ApplicationEnglishLearning.props",
+      "PackagePath": "buildTransitive\\ApplicationEnglishLearning.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,15 +1,15 @@
 [
   {
-    "ContainingType": "ApplicationEnglishLearning.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "ApplicationEnglishLearning.Controllers.WordsController",
+    "Method": "Index",
+    "RelativePath": "Words",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ApplicationEnglishLearning.WeatherForecast, ApplicationEnglishLearning, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ApplicationEnglishLearning.Models.WordFromDictionary, ApplicationEnglishLearning, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -18,5 +18,79 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ApplicationEnglishLearning.Controllers.WordsController",
+    "Method": "Post",
+    "RelativePath": "Words/CreateWord",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wordFromDictionary",
+        "Type": "ApplicationEnglishLearning.Models.WordFromDictionary",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationEnglishLearning.Controllers.WordsController",
+    "Method": "Delete",
+    "RelativePath": "Words/DeleteWord",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wordFromDictionary",
+        "Type": "ApplicationEnglishLearning.Models.WordFromDictionary",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationEnglishLearning.Controllers.WordsController",
+    "Method": "Get",
+    "RelativePath": "Words/GetTestedWords/{count}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "count",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ApplicationEnglishLearning.Models.WordToTest, ApplicationEnglishLearning, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApplicationEnglishLearning.Controllers.WordsController",
+    "Method": "PostTestWord",
+    "RelativePath": "Words/TestWord",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wordToTest",
+        "Type": "ApplicationEnglishLearning.Models.WordToTest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
