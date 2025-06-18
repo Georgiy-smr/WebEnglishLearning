@@ -149,3 +149,8 @@ C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\obj\Debu
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\obj\Debug\net8.0\DataBaseTests.pdb
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\obj\Debug\net8.0\DataBaseTests.genruntimeconfig.cache
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\obj\Debug\net8.0\ref\DataBaseTests.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\bin\Debug\net8.0\StatusGeneric.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\bin\Debug\net8.0\MediatR.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\bin\Debug\net8.0\Repository.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseTests\bin\Debug\net8.0\Repository.pdb

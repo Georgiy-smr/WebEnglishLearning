@@ -16,3 +16,5 @@ C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\obj\D
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\refint\DataBaseServices.dll
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.pdb
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\ref\DataBaseServices.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Repository.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Repository.pdb

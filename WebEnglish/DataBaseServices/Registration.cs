@@ -1,6 +1,9 @@
-﻿using ContextDataBase;
+﻿using System.Reflection;
+using ContextDataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Repository;
+using Repository.Commands.Read.ReadService;
 
 namespace DataBaseServices
 {
@@ -17,6 +20,7 @@ namespace DataBaseServices
                     options.UseSqlite($"Data Source={pathFileDataBase}");
                 })
                 .AddSingleton<Initialization>()
-            ;
+                .AddRepository()
+        ;
     }
 }
