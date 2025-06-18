@@ -116,8 +116,8 @@
             .then(result => {
                 document.getElementById('response').textContent = 'Ответ отправлен. Результат: ' + JSON.stringify(result);
 
-                // Можно сразу загрузить новое задание, если нужно
-                // document.getElementById('loadTest').click();
+                if (result)
+                document.getElementById('loadTest').click();
             })
             .catch(err => {
                 document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
