@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 using DataBaseServices;
 using Entities;
 using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Repository.Commands.Create;
+using Repository.Commands.Delete;
 using Repository.Commands.Read;
 using Repository.Commands.Update;
 using Repository.DTO;
@@ -16,10 +12,10 @@ using StatusGeneric;
 
 namespace DataBaseTests
 {
-    public class RepositoryTests
+    public class RepositoryWordsTests
     {
         [Fact]
-        public async void GetWordsDto()
+        public async void Read()
         {
             IServiceCollection services = new ServiceCollection();
             services.AddDataBaseServices("testRepository.db");
@@ -57,7 +53,7 @@ namespace DataBaseTests
         }
 
         [Fact]
-        public async void CreateWord()
+        public async void Create()
         {
             IServiceCollection services = new ServiceCollection();
             services.AddDataBaseServices("testRepository.db");
@@ -106,7 +102,7 @@ namespace DataBaseTests
 
 
         [Fact]
-        public async void UpdateWord()
+        public async void Update()
         {
             IServiceCollection services = new ServiceCollection();
             services.AddDataBaseServices("testRepository.db");
@@ -171,5 +167,68 @@ namespace DataBaseTests
             Assert.True(resultReadNewWord.IsValid);
         }
 
+        [Fact]
+        public async void Delete()
+        {
+            IServiceCollection services = new ServiceCollection();
+            services.AddDataBaseServices("testRepository.db");
+
+            IServiceProvider provider = services.BuildServiceProvider();
+
+            using var scope = provider.CreateScope();
+
+            bool resultInitialize = await scope.ServiceProvider.GetRequiredService<Initialization>().InitializeAsync();
+
+            if (!resultInitialize)
+                throw new Exception("DataBase is not initialized");
+
+            //Arrange
+
+            var sut = scope.ServiceProvider.GetRequiredService<IRepository>();
+            GetWordsRequest readSingle = new GetWordsRequest
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+
+                },
+                Includes = new List<Expression<Func<Word, object>>>()
+                {
+
+                },
+                Size = 10,
+                ZeroStart = 0
+            };
+            IStatusGeneric<IEnumerable<WordDto>> resultRead = await sut.GetItemsAsync<WordDto>(readSingle);
+            Assert.True(resultRead.IsValid);
+            WordDto toRemove = resultRead.Result.Last();
+
+            //Act
+
+            DeleteWordRequest deleteCommand = new DeleteWordRequest(toRemove);
+
+            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(deleteCommand);
+
+            Assert.True(resultUpdate.IsValid);
+
+            //Assert
+
+            GetWordsRequest readRemovedWordCommand = new GetWordsRequest
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.Id == toRemove.Id,
+                },
+                Includes = new List<Expression<Func<Word, object>>>()
+                {
+
+                },
+                Size = 1,
+                ZeroStart = 0
+            };
+
+            var resultReadRemoved = await sut.GetItemsAsync(readRemovedWordCommand);
+
+            Assert.False(resultReadRemoved.IsValid);
+        }
     }
 }

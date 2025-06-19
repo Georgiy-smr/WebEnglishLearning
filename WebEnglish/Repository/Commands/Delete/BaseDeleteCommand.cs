@@ -9,13 +9,15 @@ using StatusGeneric;
 
 namespace Repository.Commands.Delete;
 
-public record BaseDeleteCommand(BaseDto EntityToRemove) : BaseCommandDataBase();
+public record BaseDeleteCommand(int IdEntity) : BaseCommandDataBase();
 
-public sealed record DeleteWordRequest(WordDto WordToRemove) : BaseDeleteCommand(WordToRemove)
+public record DeleteWordRequest(int Id) : BaseDeleteCommand(Id)
 {
+    public DeleteWordRequest(BaseDto wordToRemove) : this(wordToRemove.Id) {}
+    public DeleteWordRequest(IEntity entityToRemove) : this(entityToRemove.Id) { }
     public override string ToString()
     {
-        string name = $"{nameof(DeleteWordRequest)} {WordToRemove.Id}";
+        string name = $"{nameof(DeleteWordRequest)} {Id}";
         return base.ToString();
     }
 }
@@ -44,7 +46,7 @@ public record DeleteWordRequestHandler : IRequestHandler<DeleteWordRequest, ISta
         try
         {
             var context = provider.GetRequiredService<AppDbContext>();
-            var toRemove = await context.Words.SingleAsync(x => x.Id == request.WordToRemove.Id, cancellationToken: cancellationToken);
+            var toRemove = await context.Words.SingleAsync(x => x.Id == request.Id, cancellationToken: cancellationToken);
             toRemove.SoftDeleted = true;
             await context.SaveChangesAsync(cancellationToken);
             _logger.LogInformation($"{request} is success");
