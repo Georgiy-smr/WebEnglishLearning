@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Repository.Commands.Create;
 using Repository.Commands.Read;
+using Repository.Commands.Update;
 using Repository.DTO;
 using StatusGeneric;
 
@@ -103,6 +104,72 @@ namespace DataBaseTests
         }
 
 
+
+        [Fact]
+        public async void UpdateWord()
+        {
+            IServiceCollection services = new ServiceCollection();
+            services.AddDataBaseServices("testRepository.db");
+
+            IServiceProvider provider = services.BuildServiceProvider();
+
+            using var scope = provider.CreateScope();
+
+            bool resultInitialize = await scope.ServiceProvider.GetRequiredService<Initialization>().InitializeAsync();
+
+            if (!resultInitialize)
+                throw new Exception("DataBase is not initialized");
+
+            //Arrange
+
+            var sut = scope.ServiceProvider.GetRequiredService<IRepository>();
+            GetWordsRequest readSingle = new GetWordsRequest
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+
+                },
+                Includes = new List<Expression<Func<Word, object>>>()
+                {
+
+                },
+                Size = 10,
+                ZeroStart = 0
+            };
+            IStatusGeneric<IEnumerable<WordDto>> resultRead = await sut.GetItemsAsync<WordDto>(readSingle);
+            Assert.True(resultRead.IsValid);
+            WordDto oldWord = resultRead.Result.Last();
+
+            //Act
+
+            UpdateWordRequest updateCommand = new UpdateWordRequest(oldWord with { Rus = "Привет!", Eng = "Hello!" });
+
+            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(updateCommand);
+
+            Assert.True(resultUpdate.IsValid);
+
+            //Assert
+
+            GetWordsRequest readUpdateSingle = new GetWordsRequest
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.Id == oldWord.Id,
+                    x => x.RusWord == "Привет!",
+                    x => x.EngWord ==  "Hello!"
+                },
+                Includes = new List<Expression<Func<Word, object>>>()
+                {
+
+                },
+                Size = 1,
+                ZeroStart = 0
+            };
+
+            IStatusGeneric<IEnumerable<WordDto>> resultReadNewWord = await sut.GetItemsAsync(readUpdateSingle);
+
+            Assert.True(resultReadNewWord.IsValid);
+        }
 
     }
 }
