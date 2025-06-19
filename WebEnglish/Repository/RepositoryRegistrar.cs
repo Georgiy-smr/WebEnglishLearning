@@ -17,7 +17,6 @@ namespace Repository
                .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
                .AddScoped(typeof(IEntityCollection<>), typeof(DataBaseEntitiyes<>))
                .AddScoped<IRepository, Repository>()
-               .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
                ;
         } 
     }

@@ -1,8 +1,16 @@
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using ApplicationEnglishLearning.Models;
 using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Repository;
+using Repository.Commands.Create;
+using Repository.Commands.Delete;
+using Repository.Commands.Read;
+using Repository.DTO;
+using StatusGeneric;
 
 namespace ApplicationEnglishLearning.Controllers
 {
@@ -10,28 +18,122 @@ namespace ApplicationEnglishLearning.Controllers
     [Route("[controller]")]
     public class WordsController : ControllerBase
     {
+        private readonly IRepository _repository;
+        private readonly ILogger<WordsController> _logger;
         private readonly ITranslateDictionary<string, string> _translateDictionary;
 
-        private readonly ILogger<WordsController> _logger;
-
         public WordsController(ILogger<WordsController> logger,
-            ITranslateDictionary<string, string> translateDictionary)
+            ITranslateDictionary<string, string> translateDictionary, IRepository repository)
         {
             _logger = logger;
             _translateDictionary = translateDictionary;
+            _repository = repository;
         }
 
         [HttpGet(Name = "words")]
-        public ActionResult<IEnumerable<WordFromDictionary>> Index()
+        public async Task<ActionResult<IEnumerable<WordFromDictionary>>> Index()
         {
-            return Ok(_translateDictionary.Get().Select(x => new WordFromDictionary(x.Key, x.Value)));
+            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
+            {
+                Filters = new List<Expression<Func<Word, bool>>>(),
+                Includes = new List<Expression<Func<Word, object>>>(),
+                Size = 500,
+                ZeroStart = 0
+            });
+
+            if (resultGet.HasErrors)
+                return BadRequest(string.Join(";", resultGet.Errors));
+
+            return Ok(resultGet.Result.Select(x => new WordFromDictionary(x.Eng, x.Rus)));
+        }
+
+        [HttpDelete("DeleteWord")]
+        [ServiceFilter(typeof(ValidateWordFilter))]
+        public async Task<IActionResult> Delete([FromBody] WordFromDictionary wordFromDictionary)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.EngWord == wordFromDictionary.EnglishWord,
+                    x => x.RusWord == wordFromDictionary.RussianWord
+                },
+                Includes = new List<Expression<Func<Word, object>>>(),
+                Size = 1,
+                ZeroStart = 0
+            });
+
+            if (resultGet.HasErrors)
+                return BadRequest(string.Join(";", resultGet.Errors));
+
+            WordDto wordToRemove = resultGet.Result.Single();
+            IStatusGeneric resultRemove = await _repository.DataBaseOperationAsync(new DeleteWordRequest(wordToRemove));
+
+            if (resultRemove.HasErrors)
+                return BadRequest(string.Join(";", resultRemove.Errors));
+
+            return Ok(resultRemove.Message);
         }
 
 
-        [HttpGet("GetTestedWords/{count}")]
-        public IEnumerable<WordToTest> Get(int count)
+        [HttpPut("CreateWord")]
+        [ServiceFilter(typeof(ValidateWordFilter))]
+        public async Task<IActionResult> Post([FromBody] WordFromDictionary wordFromDictionary)
         {
-            var collectionWords = _translateDictionary.Get();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.EngWord == wordFromDictionary.EnglishWord ||
+                         x.RusWord == wordFromDictionary.RussianWord
+                },
+                Includes = new List<Expression<Func<Word, object>>>(),
+                Size = 10,
+                ZeroStart = 0
+            });
+
+            if (resultGet.IsValid)
+                return BadRequest(new { error = "Есть совпадения в словаре." });
+            
+
+
+            IStatusGeneric resultAdd = await _repository.DataBaseOperationAsync(
+                new CreateWordRequest(new WordDto(Eng: wordFromDictionary.EnglishWord,
+                    Rus: wordFromDictionary.RussianWord)));
+
+            if (resultAdd.HasErrors)
+                return BadRequest(string.Join(";", resultAdd.Errors));
+
+            return Ok(resultAdd.Message);
+        }
+
+
+
+        [HttpGet("GetTestedWords/{count}")]
+        public async Task<ActionResult<IEnumerable<WordToTest>>> Get(int count)
+        {
+            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
+            {
+                Filters = new List<Expression<Func<Word, bool>>>(),
+                Includes = new List<Expression<Func<Word, object>>>(),
+                Size = 500,
+                ZeroStart = 0
+            });
+
+            if (resultGet.HasErrors)
+                return BadRequest(string.Join(";", resultGet.Errors));
+
+
+            IReadOnlyDictionary<string, string> collectionWords = 
+                resultGet.Result.ToDictionary(x => x.Eng, x => x.Rus);
 
             var countAllWords = collectionWords.Count();
 
@@ -54,55 +156,27 @@ namespace ApplicationEnglishLearning.Controllers
 
 
 
-        [HttpPut("CreateWord")]
-        [ServiceFilter(typeof(ValidateWordFilter))]
-        public IActionResult Post([FromBody] WordFromDictionary wordFromDictionary)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-
-            var resultAdd = _translateDictionary.TryAdd(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord);
-
-
-            return resultAdd ? Ok(wordFromDictionary) :
-                BadRequest("This wordFromDictionary is contains in dictionary");
-        }
-
-        [HttpDelete("DeleteWord")]
-        [ServiceFilter(typeof(ValidateWordFilter))]
-        public IActionResult Delete([FromBody] WordFromDictionary wordFromDictionary)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var resultAdd = _translateDictionary.TryRemove(wordFromDictionary.EnglishWord, wordFromDictionary.RussianWord);
-            return resultAdd ? Ok(wordFromDictionary) :
-                BadRequest("This wordFromDictionary is contains in dictionary");
-        }
-
-
         [HttpPut("TestWord")]
-        public IActionResult PostTestWord([FromBody] WordToTest wordToTest)
+        public async Task<IActionResult> PostTestWord([FromBody] WordToTest wordToTest)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            if (_translateDictionary.TryGetValue(wordToTest.EnglishWord, out var expectedWord))
-            {
-                var tested = wordToTest.RussianWord.ToLower();
-                var expected = expectedWord.ToLower();
-                var result = expected == tested;
 
-                _logger.LogInformation($"English:{wordToTest.EnglishWord}. Epected:{expected} Tested:{tested}. Result:{result}");
-                return Ok(result);
-            }
-            return BadRequest("This wordFromDictionary is contains in dictionary");
+            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.EngWord == wordToTest.EnglishWord,
+                    x => x.RusWord == wordToTest.RussianWord
+                },
+                Includes = new List<Expression<Func<Word, object>>>(),
+                Size = 1,
+                ZeroStart = 0
+            });
+
+            return Ok(resultGet.IsValid);
         }
     }
 }

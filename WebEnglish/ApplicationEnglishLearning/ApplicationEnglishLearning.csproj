@@ -15,4 +15,8 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseServices\DataBaseServices.csproj" />
+  </ItemGroup>
+
 </Project>
