@@ -1,6 +1,8 @@
 ﻿using System.Linq.Expressions;
+using ContextDataBase;
 using DataBaseServices;
 using Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Repository.Commands.Create;
@@ -12,26 +14,35 @@ using StatusGeneric;
 
 namespace DataBaseTests
 {
-    public class RepositoryWordsTests
+    public class RepositoryWordsTests : Di
     {
+        protected override IServiceCollection SutServices =>
+            new ServiceCollection()
+                .AddLogging()
+                .AddDbContext<AppDbContext>((options) =>
+                {
+                    options.UseSqlite($"Data Source=TestInitDataBase.db");
+                })
+                .AddScoped<Initialization>()
+                .AddRepository()
+        ;
+
+
         [Fact]
         public async void Read()
         {
-            IServiceCollection services = new ServiceCollection();
-            services.AddDataBaseServices("testRepository.db");
-            
-            IServiceProvider provider = services.BuildServiceProvider();
 
-            using var scope = provider.CreateScope();
+            IServiceProvider provider = SutServices.BuildServiceProvider();
 
-            bool resultInitialize = await scope.ServiceProvider.GetRequiredService<Initialization>().InitializeAsync();
+
+            bool resultInitialize = await provider.GetRequiredService<Initialization>().InitializeAsync();
 
             if (!resultInitialize)
                 throw new Exception("DataBase is not initialized");
 
             //Arrange
 
-            var sut = scope.ServiceProvider.GetRequiredService<IRepository>();
+            var sut = provider.GetRequiredService<IRepository>();
 
             GetWordsRequest readCommand = new GetWordsRequest()
             {
@@ -55,10 +66,8 @@ namespace DataBaseTests
         [Fact]
         public async void Create()
         {
-            IServiceCollection services = new ServiceCollection();
-            services.AddDataBaseServices("testRepository.db");
-
-            IServiceProvider provider = services.BuildServiceProvider();
+            
+            IServiceProvider provider = SutServices.BuildServiceProvider();
 
             using var scope = provider.CreateScope();
 
@@ -104,10 +113,7 @@ namespace DataBaseTests
         [Fact]
         public async void Update()
         {
-            IServiceCollection services = new ServiceCollection();
-            services.AddDataBaseServices("testRepository.db");
-
-            IServiceProvider provider = services.BuildServiceProvider();
+            IServiceProvider provider = SutServices.BuildServiceProvider();
 
             using var scope = provider.CreateScope();
 
@@ -115,6 +121,7 @@ namespace DataBaseTests
 
             if (!resultInitialize)
                 throw new Exception("DataBase is not initialized");
+
 
             //Arrange
 
@@ -170,10 +177,7 @@ namespace DataBaseTests
         [Fact]
         public async void Delete()
         {
-            IServiceCollection services = new ServiceCollection();
-            services.AddDataBaseServices("testRepository.db");
-
-            IServiceProvider provider = services.BuildServiceProvider();
+            IServiceProvider provider = SutServices.BuildServiceProvider();
 
             using var scope = provider.CreateScope();
 
@@ -181,6 +185,7 @@ namespace DataBaseTests
 
             if (!resultInitialize)
                 throw new Exception("DataBase is not initialized");
+
 
             //Arrange
 
@@ -230,5 +235,7 @@ namespace DataBaseTests
 
             Assert.False(resultReadRemoved.IsValid);
         }
+
+
     }
 }

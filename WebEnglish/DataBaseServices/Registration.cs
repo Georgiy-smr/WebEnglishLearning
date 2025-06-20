@@ -2,6 +2,7 @@
 using ContextDataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Repository;
 using Repository.Commands.Read.ReadService;
 
@@ -9,17 +10,17 @@ namespace DataBaseServices
 {
     public static class Registration
     {
-        public static IServiceCollection AddDataBaseServices(this IServiceCollection serviceCollection, string pathFileDataBase) =>
+        public static IServiceCollection AddDataBaseServices(this IServiceCollection serviceCollection) =>
             serviceCollection
                 .AddLogging()
-                .AddSingleton<Settings>()
+                .AddSingleton<BdSettings>()
                 .AddDbContext<AppDbContext>((servicesProvider, options) =>
                 {
-                    if (string.IsNullOrWhiteSpace(pathFileDataBase))
-                        pathFileDataBase = servicesProvider.GetRequiredService<Settings>().ToString();
-                    options.UseSqlite($"Data Source={pathFileDataBase}");
+                    var settings = servicesProvider.GetRequiredService<IOptions<BdSettings>>().Value;
+                    var connectionStrings = settings.ConnectionStrings!.SQLite;
+                    options.UseSqlite($"Data Source={connectionStrings}");
                 })
-                .AddSingleton<Initialization>()
+                .AddScoped<Initialization>()
                 .AddRepository()
         ;
     }

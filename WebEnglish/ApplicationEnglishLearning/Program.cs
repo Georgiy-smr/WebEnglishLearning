@@ -24,7 +24,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ValidateWordFilter>();
 
 
-builder.Services.AddDataBaseServices("Words.db");
+
+builder.Services.Configure<BdSettings>(
+    builder.Configuration.GetSection("DataBase"));
+builder.Services.AddDataBaseServices();
 builder.Services.AddSingleton<ITranslateDictionary<string, string>, TranslateCollection>();
 
 var app = builder.Build();

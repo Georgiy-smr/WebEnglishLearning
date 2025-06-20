@@ -14,3 +14,5 @@ C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\De
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\refint\ContextDataBase.dll
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.pdb
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ref\ContextDataBase.dll
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\ContextDataBase.runtimeconfig.json
+C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.genruntimeconfig.cache

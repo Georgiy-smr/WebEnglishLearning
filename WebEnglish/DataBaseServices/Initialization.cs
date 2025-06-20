@@ -26,7 +26,7 @@ namespace DataBaseServices
             Stopwatch timer = Stopwatch.StartNew();
             try
             {
-                await _db.Database.EnsureCreatedAsync(token);
+                await _db.Database.MigrateAsync(token);
                 _Logger.LogInformation($"БД создана за {timer.Elapsed.TotalSeconds}");
 
 

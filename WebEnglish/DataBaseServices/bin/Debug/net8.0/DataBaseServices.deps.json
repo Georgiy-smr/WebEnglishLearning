@@ -431,7 +431,8 @@
       "ContextDataBase/1.0.0": {
         "dependencies": {
           "Entities": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.6"
+          "Microsoft.EntityFrameworkCore": "9.0.6",
+          "Microsoft.EntityFrameworkCore.Relational": "9.0.6"
         },
         "runtime": {
           "ContextDataBase.dll": {}
