@@ -1,7 +1,75 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E2EE6751-669E-473D-ACF8-B3C608AB5C8E}|DataBaseTests\\DataBaseTests.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\databasetests\\userstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2EE6751-669E-473D-ACF8-B3C608AB5C8E}|DataBaseTests\\DataBaseTests.csproj|solutionrelative:databasetests\\userstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\read\\getusersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\read\\getusersrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2EE6751-669E-473D-ACF8-B3C608AB5C8E}|DataBaseTests\\DataBaseTests.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\databasetests\\repositorywordstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2EE6751-669E-473D-ACF8-B3C608AB5C8E}|DataBaseTests\\DataBaseTests.csproj|solutionrelative:databasetests\\repositorywordstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\read\\readservice\\databaseentitiyes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\read\\readservice\\databaseentitiyes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\read\\getusersrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\read\\getusersrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\create\\createuserrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\create\\createuserrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\read\\getwordsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\read\\getwordsrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\read\\getwordsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\read\\getwordsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\create\\createwordrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\create\\createwordrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\repositoryregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\repositoryregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\AppData\\Local\\Temp\\.vsdbgsrc\\106739112c966cc39d25dd039145ce9de2cff17182935e358a18dd53276b70ce\\MethodBaseInvoker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2EE6751-669E-473D-ACF8-B3C608AB5C8E}|DataBaseTests\\DataBaseTests.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\databasetests\\initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2EE6751-669E-473D-ACF8-B3C608AB5C8E}|DataBaseTests\\DataBaseTests.csproj|solutionrelative:databasetests\\initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\create\\createwordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\create\\createwordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\create\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\create\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\dto\\worddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\dto\\worddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +77,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,6 +146,227 @@
             {
               "$type": "Bookmark",
               "Name": "ST:138:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataBaseEntitiyes.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\ReadService\\DataBaseEntitiyes.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Read\\ReadService\\DataBaseEntitiyes.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\ReadService\\DataBaseEntitiyes.cs",
+              "RelativeToolTip": "Repository\\Commands\\Read\\ReadService\\DataBaseEntitiyes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:42:43.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetUsersRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetUsersRequest.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Read\\GetUsersRequest.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetUsersRequest.cs",
+              "RelativeToolTip": "Repository\\Commands\\Read\\GetUsersRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:33:42.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetWordsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetWordsRequest.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Read\\GetWordsRequest.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetWordsRequest.cs",
+              "RelativeToolTip": "Repository\\Commands\\Read\\GetWordsRequest.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwBUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:32:37.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RepositoryRegistrar.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\RepositoryRegistrar.cs",
+              "RelativeDocumentMoniker": "Repository\\RepositoryRegistrar.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\RepositoryRegistrar.cs",
+              "RelativeToolTip": "Repository\\RepositoryRegistrar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:29:43.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repository.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.cs",
+              "RelativeToolTip": "Repository\\Repository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAEwBkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:28:56.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersTests.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\UsersTests.cs",
+              "RelativeDocumentMoniker": "DataBaseTests\\UsersTests.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\UsersTests.cs",
+              "RelativeToolTip": "DataBaseTests\\UsersTests.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAUwG0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:23:24.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Initialization.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\Initialization.cs",
+              "RelativeDocumentMoniker": "DataBaseTests\\Initialization.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\Initialization.cs",
+              "RelativeToolTip": "DataBaseTests\\Initialization.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:21:56.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RepositoryWordsTests.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\RepositoryWordsTests.cs",
+              "RelativeDocumentMoniker": "DataBaseTests\\RepositoryWordsTests.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\RepositoryWordsTests.cs",
+              "RelativeToolTip": "DataBaseTests\\RepositoryWordsTests.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:20:48.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateUserRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "RelativeToolTip": "Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAADwvxYAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:20:30.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetUsersRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
+              "RelativeToolTip": "Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:37:16.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetWordsRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetWordsRequestHandler.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Read\\GetWordsRequestHandler.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetWordsRequestHandler.cs",
+              "RelativeToolTip": "Repository\\Commands\\Read\\GetWordsRequestHandler.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAUwDwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:33:35.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateWordRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateWordRequestHandler.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Create\\CreateWordRequestHandler.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateWordRequestHandler.cs",
+              "RelativeToolTip": "Repository\\Commands\\Create\\CreateWordRequestHandler.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAUwB0AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:18:30.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MethodBaseInvoker.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\AppData\\Local\\Temp\\.vsdbgsrc\\106739112c966cc39d25dd039145ce9de2cff17182935e358a18dd53276b70ce\\MethodBaseInvoker.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\106739112c966cc39d25dd039145ce9de2cff17182935e358a18dd53276b70ce\\MethodBaseInvoker.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\AppData\\Local\\Temp\\.vsdbgsrc\\106739112c966cc39d25dd039145ce9de2cff17182935e358a18dd53276b70ce\\MethodBaseInvoker.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\106739112c966cc39d25dd039145ce9de2cff17182935e358a18dd53276b70ce\\MethodBaseInvoker.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAAwFYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:28:04.037Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\IRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:28:15.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateUserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequest.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Create\\CreateUserRequest.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequest.cs",
+              "RelativeToolTip": "Repository\\Commands\\Create\\CreateUserRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:18:28.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WordDto.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\DTO\\WordDto.cs",
+              "RelativeDocumentMoniker": "Repository\\DTO\\WordDto.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\DTO\\WordDto.cs",
+              "RelativeToolTip": "Repository\\DTO\\WordDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:15:58.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateWordRequest.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateWordRequest.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Create\\CreateWordRequest.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateWordRequest.cs",
+              "RelativeToolTip": "Repository\\Commands\\Create\\CreateWordRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T19:15:38.435Z",
+              "EditorCaption": ""
             }
           ]
         },
