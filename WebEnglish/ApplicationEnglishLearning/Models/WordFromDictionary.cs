@@ -20,7 +20,7 @@ public record WordToTest([Required(ErrorMessage = "EnglishWord is required")]
 
 
 
-public record UserToRegister(
+public record UserToAuth(
 
     [Required(ErrorMessage = "UserName is required")]
     [MinLength(3, ErrorMessage = "UserName cannot be empty")]

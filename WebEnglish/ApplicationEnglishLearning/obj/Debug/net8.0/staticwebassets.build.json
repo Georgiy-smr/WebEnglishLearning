@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "emz1Kp9r6Qq9lyrWm2woTvAp5e7XdaElMYx8OGj7mOg=",
+  "Hash": "//oX1z49M6NraM3dMtN2zPWkiIKf9glaqn16QtM1+Ik=",
   "Source": "ApplicationEnglishLearning",
   "BasePath": "_content/ApplicationEnglishLearning",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ApplicationEnglishLearning\\wwwroot",
       "Source": "ApplicationEnglishLearning",
-      "ContentRoot": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
       "RelativePath": "Create.html",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\Create.html"
     },
     {
-      "Identity": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
       "RelativePath": "GetAll.html",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\GetAll.html"
     },
     {
-      "Identity": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
       "RelativePath": "Test.html",
       "AssetKind": "All",

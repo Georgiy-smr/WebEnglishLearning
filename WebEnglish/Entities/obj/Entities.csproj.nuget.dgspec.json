@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj": {}
+    "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj": {
+    "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Гоша и Аня\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\mrsmi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Гоша и Аня\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mrsmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

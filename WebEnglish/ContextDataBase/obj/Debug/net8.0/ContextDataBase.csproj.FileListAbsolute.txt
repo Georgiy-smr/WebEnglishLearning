@@ -16,3 +16,21 @@ C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\De
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ref\ContextDataBase.dll
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\ContextDataBase.runtimeconfig.json
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.genruntimeconfig.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\ContextDataBase.deps.json
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\ContextDataBase.runtimeconfig.json
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\ContextDataBase.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\ContextDataBase.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\Entities.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\Entities.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.csproj.AssemblyReference.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.AssemblyInfoInputs.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.AssemblyInfo.cs
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.csproj.CoreCompileInputs.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.sourcelink.json
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextD.20357D2A.Up2Date
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\refint\ContextDataBase.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.genruntimeconfig.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ref\ContextDataBase.dll

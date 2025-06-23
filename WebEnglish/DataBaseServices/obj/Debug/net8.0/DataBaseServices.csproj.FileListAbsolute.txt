@@ -18,3 +18,23 @@ C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\obj\D
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\ref\DataBaseServices.dll
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Repository.dll
 C:\Users\Гоша и Аня\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Repository.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\DataBaseServices.deps.json
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\DataBaseServices.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\DataBaseServices.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\ContextDataBase.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Entities.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Repository.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\ContextDataBase.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Repository.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\Entities.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.csproj.AssemblyReference.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.AssemblyInfoInputs.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.AssemblyInfo.cs
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.csproj.CoreCompileInputs.cache
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.sourcelink.json
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBase.38307DD3.Up2Date
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\refint\DataBaseServices.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.pdb
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\ref\DataBaseServices.dll

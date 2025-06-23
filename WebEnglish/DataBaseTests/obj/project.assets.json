@@ -6991,19 +6991,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Гоша и Аня\\.nuget\\packages\\": {}
+    "C:\\Users\\mrsmi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\DataBaseTests.csproj",
+      "projectUniqueName": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\DataBaseTests.csproj",
       "projectName": "DataBaseTests",
-      "projectPath": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\DataBaseTests.csproj",
-      "packagesPath": "C:\\Users\\Гоша и Аня\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\obj\\",
+      "projectPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\DataBaseTests.csproj",
+      "packagesPath": "C:\\Users\\mrsmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\DataBaseTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Гоша и Аня\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mrsmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7017,11 +7017,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\DataBaseServices\\DataBaseServices.csproj": {
-              "projectPath": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\DataBaseServices\\DataBaseServices.csproj"
+            "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\DataBaseServices\\DataBaseServices.csproj": {
+              "projectPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\DataBaseServices\\DataBaseServices.csproj"
             },
-            "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.csproj"
+            "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.csproj"
             }
           }
         }
@@ -7078,7 +7078,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

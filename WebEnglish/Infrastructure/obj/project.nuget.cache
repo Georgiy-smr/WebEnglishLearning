@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "76egy6R9MK9kI4FxcMy1y6cCYJqbj5P87nDCGkj2ZhOfDDzWDGh+I5iEEnFB3QgC/cjZaK9OeHb2+Kg80CQWJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Infrastructure\\Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mrsmi\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
