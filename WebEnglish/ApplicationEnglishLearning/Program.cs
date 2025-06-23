@@ -2,6 +2,7 @@ using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
 using DataBaseServices;
 using System.Diagnostics;
+using Infrastructure.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ValidateWordFilter>();
+
+
+builder.Services.Configure<JwtOptions>(
+    builder.Configuration.GetSection("JwtOptions"));
+builder.Services.AddTransient<IGenerateToken, Jwt>();
 
 
 

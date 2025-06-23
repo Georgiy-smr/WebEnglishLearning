@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using ApplicationEnglishLearning.Models;
 using Entities;
+using Infrastructure.Authentication;
 using Infrastructure.PasswordHelps;
 using Infrastructure.PasswordHelps.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -17,10 +18,15 @@ namespace ApplicationEnglishLearning.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly IRepository _repository;
+    private readonly IGenerateToken _generateToken;
 
-    public AuthController(IRepository repository)
+
+    public AuthController(
+        IRepository repository,
+        IGenerateToken generateToken)
     {
         _repository = repository;
+        _generateToken = generateToken;
     }
 
 
@@ -32,11 +38,7 @@ public class AuthController : ControllerBase
             return BadRequest(ModelState);
         }
 
-        //TODO
-        //Создать пользователя с хешированым паролем
-        //Вернуть JWT токен.
-
-
+  
         IPasswordHash hash = new Password(userAuth.PassWord);
         var passwordHashed = hash.GetHashed();
         CreateUserRequest createCommand = new CreateUserRequest(new UserDto(userAuth.UserName, passwordHashed));
@@ -75,7 +77,14 @@ public class AuthController : ControllerBase
 
         IValidatePassword validate = new HashValidateWithException(new HashValidate(userInDataBase.HashPass));
 
-        return Ok(validate.Validate(userAuth.PassWord));
+        if (!validate.Validate(userAuth.PassWord))
+            return BadRequest(401);
+
+
+        var token = _generateToken.Generate(userInDataBase);
+
+        //Вернуть JWT токен.
+        return Ok();
     }
 
 }
