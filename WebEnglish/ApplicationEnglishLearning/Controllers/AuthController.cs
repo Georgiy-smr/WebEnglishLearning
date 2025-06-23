@@ -80,9 +80,8 @@ public class AuthController : ControllerBase
         if (!validate.Validate(userAuth.PassWord))
             return BadRequest(401);
 
-
         var token = _generateToken.Generate(userInDataBase);
-
+        HttpContext.Response.Cookies.Append("jwt", token);
         //Вернуть JWT токен.
         return Ok(token);
     }
