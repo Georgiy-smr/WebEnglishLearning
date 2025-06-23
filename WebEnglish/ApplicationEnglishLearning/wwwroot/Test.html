@@ -27,12 +27,41 @@
 
 <div id="response"></div>
 <script>
+
+    function getCookie(name) {
+        const cookie = document.cookie
+            .split('; ')
+            .find(row => row.startsWith(name + '='));
+        return cookie ? cookie.split('=')[1] : null;
+    }
+
+
     let currentEnglishWord = '';
     let selectedRussianWord = '';
 
     document.getElementById('loadTest').addEventListener('click', () => {
 
-        fetch('https://192.168.1.125:7041/Words/GetTestedWords/4')
+        const tokenFromCookie = getCookie('jwt');
+        const tokenFromStorage = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
+
+        var token = "";
+        if (tokenFromCookie)
+            token = tokenFromCookie;
+        else if (tokenFromStorage)
+            token = tokenFromStorage;
+        else {
+            alert('Залогинься!');
+        }
+
+
+        fetch('https://192.168.1.125:7041/Words/GetTestedWords/4',
+            {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + token
+                }
+            })
             .then(res => {
                 if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
                 return res.json();
@@ -124,6 +153,8 @@
             });
     });
     
+
+
 </script>
 </body>
 </html>

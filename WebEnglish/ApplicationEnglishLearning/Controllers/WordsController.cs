@@ -127,13 +127,19 @@ namespace ApplicationEnglishLearning.Controllers
         }
 
 
-
+        [Authorize]
         [HttpGet("GetTestedWords/{count}")]
         public async Task<ActionResult<IEnumerable<WordToTest>>> Get(int count)
         {
+
+            int userId = int.Parse(User.FindFirst("userId")?.Value!);
+
             IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
             {
-                Filters = new List<Expression<Func<Word, bool>>>(),
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.User != null & x.User!.Id == userId,
+                } ,
                 Includes = new List<Expression<Func<Word, object>>>(),
                 Size = 500,
                 ZeroStart = 0
