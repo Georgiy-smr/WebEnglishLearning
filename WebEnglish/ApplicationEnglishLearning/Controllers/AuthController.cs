@@ -82,7 +82,7 @@ public class AuthController : ControllerBase
 
         var token = _generateToken.Generate(userInDataBase);
         HttpContext.Response.Cookies.Append("jwt", token);
-        //Вернуть JWT токен.
+
         return Ok(token);
     }
 

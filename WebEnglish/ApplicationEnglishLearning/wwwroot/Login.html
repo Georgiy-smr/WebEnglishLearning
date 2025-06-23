@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Слова</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #wordsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Войти</h1>
+    <h2>Имя</h2>
+    <input id="userName" />
+	<h2>Пароль</h2>
+	<input type="password" id="password" />
+    <div>
+        <h2></h2>
+        <button id="login">
+            Войти
+        </button>
+    </div>
+    <div id="response">
+
+    </div>
+<script>
+        let userNameContent = "";
+        let passwordContent = "";
+
+        document.getElementById('login').addEventListener('click', () => {
+
+            userNameContent = document.getElementById('userName').value;
+            if (!userNameContent) {
+                alert('Пожалуйста, введите имя');
+                return;
+            }
+
+            passwordContent = document.getElementById('password').value;
+            if (!passwordContent) {
+                alert('Пожалуйста, введите пароль');
+                return;
+            }
+            fetch('https://10.13.60.40:7041/Auth/login', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userName: userNameContent,
+                    passWord: passwordContent
+                })
+            }).then(res => {
+                if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
+                return res.json();
+            }).then(result => {
+
+                const jwt = result;
+                localStorage.setItem('jwtToken', jwt);
+
+                document.getElementById('response').textContent = 'Ответ отправлен. Результат: \n' + jwt;
+            }).catch(err => {
+                document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
+            });
+        });
+    </script>
+</body>
+</html>
+

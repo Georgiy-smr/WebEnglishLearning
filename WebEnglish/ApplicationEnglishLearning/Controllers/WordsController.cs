@@ -4,6 +4,7 @@ using ApplicationEnglishLearning.Models;
 using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
 using Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using Repository.Commands.Create;
@@ -30,6 +31,7 @@ namespace ApplicationEnglishLearning.Controllers
             _repository = repository;
         }
 
+        [Authorize]
         [HttpGet(Name = "words")]
         public async Task<ActionResult<IEnumerable<WordFromDictionary>>> Index()
         {
