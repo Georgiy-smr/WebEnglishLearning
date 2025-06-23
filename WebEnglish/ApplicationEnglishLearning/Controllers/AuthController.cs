@@ -84,7 +84,7 @@ public class AuthController : ControllerBase
         var token = _generateToken.Generate(userInDataBase);
 
         //Вернуть JWT токен.
-        return Ok();
+        return Ok(token);
     }
 
 }
