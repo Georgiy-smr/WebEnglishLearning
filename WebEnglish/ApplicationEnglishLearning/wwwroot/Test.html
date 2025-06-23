@@ -32,7 +32,7 @@
 
     document.getElementById('loadTest').addEventListener('click', () => {
 
-        fetch('https://10.13.60.40:7041/Words/GetTestedWords/4')
+        fetch('https://192.168.1.125:7041/Words/GetTestedWords/4')
             .then(res => {
                 if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
                 return res.json();
@@ -98,7 +98,7 @@
             alert('Пожалуйста, выберите перевод');
             return;
         }
-        fetch('https://10.13.60.40:7041/Words/TestWord', {
+        fetch('https://192.168.1.125:7041/Words/TestWord', {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',

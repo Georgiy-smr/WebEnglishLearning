@@ -35,6 +35,10 @@ namespace ApplicationEnglishLearning.Controllers
         [HttpGet(Name = "words")]
         public async Task<ActionResult<IEnumerable<WordFromDictionary>>> Index()
         {
+            var s = User.Claims;
+
+            var id = User.FindFirst("userId")?.Value;
+
             IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
             {
                 Filters = new List<Expression<Func<Word, bool>>>(),

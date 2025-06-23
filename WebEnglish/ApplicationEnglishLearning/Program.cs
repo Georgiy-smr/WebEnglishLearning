@@ -2,7 +2,10 @@ using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
 using DataBaseServices;
 using System.Diagnostics;
+using System.Text;
 using Infrastructure.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +18,9 @@ builder.WebHost.UseKestrel(options =>
         listenOptions.UseHttps(); // Используйте сертификат по умолчанию
     });
 });
+
+
+
 
 // Add services to the container.
 
@@ -36,6 +42,28 @@ builder.Services.Configure<BdSettings>(
 builder.Services.AddDataBaseServices();
 builder.Services.AddSingleton<ITranslateDictionary<string, string>, TranslateCollection>();
 
+
+
+// Конфигурация JWT аутентификации
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("secretkeysecretkeysecretkeysecretkeysecretkeysecretkeysecretkeysecretkey"))
+        };
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,9 +73,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
-//app.UseAuthorization();
+// Важно: сначала аутентификация, потом авторизация
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

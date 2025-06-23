@@ -31,14 +31,19 @@
 
         const token = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
 
-            fetch('https://10.13.60.40:7041/Words') // Замените URL на ваш API
-                .then(response => {
+        fetch('https://192.168.1.125:7041/Words',
+            {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + token
+                }
+            }).then(response => {
                     if (!response.ok) {
                         throw new Error('Сеть ответила с ошибкой: ' + response.status);
                     }
                     return response.json();
-                })
-                .then(data => {
+                }).then(data => {
                     const container = document.getElementById('wordsList');
                     container.innerHTML = ''; // Очищаем предыдущий список
 
@@ -91,7 +96,7 @@
                 alert('Нету русского слова');
                 return;
             }
-            fetch('https://10.13.60.40:7041/Words/DeleteWord', {
+            fetch('https://192.168.1.125:7041/Words/DeleteWord', {
                 method: 'DELETE',
                 headers: {
                     'Accept': 'application/json',
