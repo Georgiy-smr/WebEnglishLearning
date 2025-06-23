@@ -25,11 +25,30 @@
 <div id="response"></div>
 
 <script>
+
+    function getCookie(name) {
+        const cookie = document.cookie
+            .split('; ')
+            .find(row => row.startsWith(name + '='));
+        return cookie ? cookie.split('=')[1] : null;
+    }
+
+
         let currentEnglishWord = '';
         let currrentRussianWord = '';
     document.getElementById('getWordsButton').addEventListener('click', function () {
 
-        const token = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
+        const tokenFromCookie = getCookie('jwt');
+        const tokenFromStorage = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
+
+        var token = "";
+        if (tokenFromCookie)
+            token = tokenFromCookie;
+        else if (tokenFromStorage)
+            token = tokenFromStorage;
+        else {
+            alert('Залогинься!');
+        }
 
         fetch('https://192.168.1.125:7041/Words',
             {
@@ -118,7 +137,8 @@
                     document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
                 });
         });
-    </script>
+    
+</script>
 </body>
 </html>
 
