@@ -1,15 +1,23 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
       "PackagePath": "staticwebassets\\Create.html"
     },
     {
-      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
       "PackagePath": "staticwebassets\\GetAll.html"
     },
     {
-      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
+      "PackagePath": "staticwebassets\\Login.html"
+    },
+    {
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
+      "PackagePath": "staticwebassets\\Register.html"
+    },
+    {
+      "Id": "C:\\Users\\Гоша и Аня\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
       "PackagePath": "staticwebassets\\Test.html"
     },
     {

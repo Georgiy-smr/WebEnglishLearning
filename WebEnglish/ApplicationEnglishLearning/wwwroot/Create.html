@@ -31,10 +31,32 @@
 
 </div>
 <script>
+
+    function getCookie(name) {
+        const cookie = document.cookie
+            .split('; ')
+            .find(row => row.startsWith(name + '='));
+        return cookie ? cookie.split('=')[1] : null;
+    }
+
     let engWordContent = "";
     let rusWordContent = "";
 
     document.getElementById('createButton').addEventListener('click', () => {
+
+
+        const tokenFromCookie = getCookie('jwt');
+        const tokenFromStorage = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
+
+        var token = "";
+        if (tokenFromCookie)
+            token = tokenFromCookie;
+        else if (tokenFromStorage)
+            token = tokenFromStorage;
+        else {
+            alert('Залогинься!');
+        }
+
 
         engWordContent = document.getElementById('engWord').value;
         if (!engWordContent) {
@@ -51,7 +73,8 @@
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
             },
             body: JSON.stringify({
                 englishWord: engWordContent,
@@ -66,6 +89,7 @@
             document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
         });
     });
+
 </script>
 </body>
 </html>

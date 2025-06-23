@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "ApplicationEnglishLearning.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userAuth",
+        "Type": "ApplicationEnglishLearning.Models.UserToAuth",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationEnglishLearning.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userAuth",
+        "Type": "ApplicationEnglishLearning.Models.UserToAuth",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApplicationEnglishLearning.Controllers.WordsController",
     "Method": "Index",
     "RelativePath": "Words",

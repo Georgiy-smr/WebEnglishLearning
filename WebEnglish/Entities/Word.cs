@@ -10,5 +10,7 @@ namespace Entities
         [Required]
         [MinLength(1, ErrorMessage = "EnglishWord cannot be empty")]
         public string RusWord { get; set; } = string.Empty;
+
+        public User? User { get; set; }
     }
 }

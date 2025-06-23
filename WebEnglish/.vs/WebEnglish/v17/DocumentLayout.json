@@ -1,26 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\mrsmi\\webenglishlearning\\webenglish\\repository\\commands\\read\\getusersrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\read\\getusersrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\mrsmi\\webenglishlearning\\webenglish\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|c:\\users\\mrsmi\\webenglishlearning\\webenglish\\applicationenglishlearning\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|solutionrelative:applicationenglishlearning\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\mrsmi\\webenglishlearning\\webenglish\\repository\\commands\\create\\createuserrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\repository\\commands\\create\\createuserrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB0EBE9C-F0D7-4E98-AE97-243E968487E7}|Repository\\Repository.csproj|solutionrelative:repository\\commands\\create\\createuserrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|c:\\users\\mrsmi\\webenglishlearning\\webenglish\\applicationenglishlearning\\models\\wordfromdictionary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|solutionrelative:applicationenglishlearning\\models\\wordfromdictionary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\applicationenglishlearning\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|solutionrelative:applicationenglishlearning\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\applicationenglishlearning\\wwwroot\\register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|solutionrelative:applicationenglishlearning\\wwwroot\\register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|c:\\users\\\u0433\u043E\u0448\u0430 \u0438 \u0430\u043D\u044F\\webenglishlearning\\webenglish\\applicationenglishlearning\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6A379B14-C7DB-4883-B701-3252CE5518AC}|ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj|solutionrelative:applicationenglishlearning\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,6 +28,14 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 17,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -94,68 +98,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.cs",
-              "RelativeDocumentMoniker": "Repository\\Repository.cs",
-              "ToolTip": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Repository.cs",
-              "RelativeToolTip": "Repository\\Repository.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAmwBkAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T04:38:39.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateUserRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
-              "RelativeDocumentMoniker": "Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
-              "ToolTip": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
-              "RelativeToolTip": "Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T04:38:39.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetUsersRequestHandler.cs",
-              "DocumentMoniker": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
-              "RelativeDocumentMoniker": "Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
-              "ToolTip": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
-              "RelativeToolTip": "Repository\\Commands\\Read\\GetUsersRequestHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAMAAAA",
+              "Title": "CreateUserRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "RelativeDocumentMoniker": "Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "RelativeToolTip": "Repository\\Commands\\Create\\CreateUserRequestHandler.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAADwvyUAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T04:38:39.196Z",
+              "WhenOpened": "2025-06-23T18:33:08.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WordFromDictionary.cs",
-              "DocumentMoniker": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\Models\\WordFromDictionary.cs",
-              "RelativeDocumentMoniker": "ApplicationEnglishLearning\\Models\\WordFromDictionary.cs",
-              "ToolTip": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\Models\\WordFromDictionary.cs",
-              "RelativeToolTip": "ApplicationEnglishLearning\\Models\\WordFromDictionary.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAYwBYAAAAOAAAA",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ApplicationEnglishLearning\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ApplicationEnglishLearning\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAADwvzAAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T04:32:38.605Z",
+              "WhenOpened": "2025-06-23T18:30:28.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ApplicationEnglishLearning\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ApplicationEnglishLearning\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAgwE0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T04:31:48.653Z",
+              "Title": "Register.html",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
+              "RelativeDocumentMoniker": "ApplicationEnglishLearning\\wwwroot\\Register.html",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
+              "RelativeToolTip": "ApplicationEnglishLearning\\wwwroot\\Register.html",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-23T18:29:06.138Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.html",
+              "DocumentMoniker": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
+              "RelativeDocumentMoniker": "ApplicationEnglishLearning\\wwwroot\\Login.html",
+              "ToolTip": "C:\\Users\\\u0413\u043E\u0448\u0430 \u0438 \u0410\u043D\u044F\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
+              "RelativeToolTip": "ApplicationEnglishLearning\\wwwroot\\Login.html",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAEEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-23T18:27:49.377Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 73,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

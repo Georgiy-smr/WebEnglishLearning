@@ -57,11 +57,25 @@ namespace ContextDataBase.Migrations
                     b.Property<bool>("SoftDeleted")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Id");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Words");
+                });
+
+            modelBuilder.Entity("Entities.Word", b =>
+                {
+                    b.HasOne("Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

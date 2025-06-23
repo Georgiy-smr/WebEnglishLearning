@@ -27,12 +27,15 @@ public record CreateWordRequestHandler : IRequestHandler<CreateWordRequest, ISta
         try
         {
             await using var scope = _serviceProvider.CreateAsyncScope();
-            var context = scope.ServiceProvider.GetService<AppDbContext>();
+            var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+            User? user = context.Users.FirstOrDefault(x => x.Id == request.NewWord.UserId);
 
             await context!.AddAsync(new Word()
                 {
                     EngWord = request.NewWord.Eng,
                     RusWord = request.NewWord.Rus,
+                    User = user
                 }, cancellationToken)
                 .ConfigureAwait(false);
 

@@ -37,11 +37,14 @@ namespace ApplicationEnglishLearning.Controllers
         {
             var s = User.Claims;
 
-            var id = User.FindFirst("userId")?.Value;
+            int userId = int.Parse(User.FindFirst("userId")?.Value!);
 
             IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
             {
-                Filters = new List<Expression<Func<Word, bool>>>(),
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.User != null & x.User!.Id == userId,
+                },
                 Includes = new List<Expression<Func<Word, object>>>(),
                 Size = 500,
                 ZeroStart = 0
@@ -86,11 +89,13 @@ namespace ApplicationEnglishLearning.Controllers
             return Ok(resultRemove.Message);
         }
 
-
+        [Authorize]
         [HttpPut("CreateWord")]
         [ServiceFilter(typeof(ValidateWordFilter))]
         public async Task<IActionResult> Post([FromBody] WordFromDictionary wordFromDictionary)
         {
+            int userId = int.Parse(User.FindFirst("userId")?.Value!);
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -108,12 +113,12 @@ namespace ApplicationEnglishLearning.Controllers
 
             if (resultGet.IsValid)
                 return BadRequest(new { error = "Есть совпадения в словаре." });
-            
-
 
             IStatusGeneric resultAdd = await _repository.DataBaseOperationAsync(
-                new CreateWordRequest(new WordDto(Eng: wordFromDictionary.EnglishWord,
-                    Rus: wordFromDictionary.RussianWord)));
+                new CreateWordRequest(new WordDto(
+                    Eng: wordFromDictionary.EnglishWord,
+                    Rus: wordFromDictionary.RussianWord,
+                    UserId: userId)));
 
             if (resultAdd.HasErrors)
                 return BadRequest(string.Join(";", resultAdd.Errors));

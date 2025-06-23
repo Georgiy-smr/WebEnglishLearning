@@ -1,6 +1,7 @@
 ﻿using ContextDataBase;
 using Entities;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using StatusGeneric;
@@ -28,6 +29,11 @@ public record CreateUserRequestHandler : IRequestHandler<CreateUserRequest, ISta
         {
             await using var scope = _serviceProvider.CreateAsyncScope();
             var context = scope.ServiceProvider.GetService<AppDbContext>();
+
+
+            if (await context.Users.AnyAsync(x => x.UserName == request.NewUserDto.Name,
+                    cancellationToken: cancellationToken))
+                throw new Exception("Такой пользователь уже существует!");
 
             await context!.AddAsync(new User()
                 {
