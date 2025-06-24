@@ -29,6 +29,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ValidateWordFilter>();
+builder.Services.AddTransient<IAuthService, PasswordHash>();
 
 
 builder.Services.Configure<JwtOptions>(

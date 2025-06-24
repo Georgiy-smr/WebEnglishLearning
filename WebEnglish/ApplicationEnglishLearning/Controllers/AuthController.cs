@@ -19,14 +19,17 @@ public class AuthController : ControllerBase
 {
     private readonly IRepository _repository;
     private readonly IGenerateToken _generateToken;
+    private readonly IAuthService _hashService;
 
 
     public AuthController(
         IRepository repository,
-        IGenerateToken generateToken)
+        IGenerateToken generateToken,
+        IAuthService hashService)
     {
         _repository = repository;
         _generateToken = generateToken;
+        _hashService = hashService;
     }
 
 
@@ -38,10 +41,9 @@ public class AuthController : ControllerBase
             return BadRequest(ModelState);
         }
 
-  
-        IPasswordHash hash = new Password(userAuth.PassWord);
-        var passwordHashed = hash.GetHashed();
-        CreateUserRequest createCommand = new CreateUserRequest(new UserDto(userAuth.UserName, passwordHashed));
+        CreateUserRequest createCommand = new CreateUserRequest(
+            new UserDto(userAuth.UserName, 
+                _hashService.Hash(userAuth.PassWord).GetHashed()));
 
         IStatusGeneric resultAddedNewUser = await _repository.DataBaseOperationAsync(createCommand);
 
@@ -75,9 +77,7 @@ public class AuthController : ControllerBase
         }
         UserDto userInDataBase = getUserCommand.Result.Single();
 
-        IValidatePassword validate = new HashValidateWithException(new HashValidate(userInDataBase.HashPass));
-
-        if (!validate.Validate(userAuth.PassWord))
+        if (!_hashService.CreateValidating(userInDataBase.HashPass).Validate(userAuth.PassWord))
             return BadRequest(401);
 
         var token = _generateToken.Generate(userInDataBase);
