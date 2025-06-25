@@ -3,6 +3,7 @@ using ApplicationEnglishLearning.Validate;
 using DataBaseServices;
 using System.Diagnostics;
 using System.Text;
+using ApplicationEnglishLearning.Extensions;
 using Infrastructure.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -20,8 +21,6 @@ builder.WebHost.UseKestrel(options =>
 });
 
 
-
-
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -34,7 +33,7 @@ builder.Services.AddTransient<ILogin, UserService>();
 
 
 builder.Services.Configure<JwtOptions>(
-    builder.Configuration.GetSection("JwtOptions"));
+    builder.Configuration.GetSection(nameof(JwtOptions)));
 builder.Services.AddTransient<IGenerateToken, Jwt>();
 
 
@@ -44,25 +43,7 @@ builder.Services.Configure<BdSettings>(
 builder.Services.AddDataBaseServices();
 builder.Services.AddSingleton<ITranslateDictionary<string, string>, TranslateCollection>();
 
-
-
-// Конфигурация JWT аутентификации
-builder.Services.AddAuthentication(options =>
-    {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("secretkeysecretkeysecretkeysecretkeysecretkeysecretkeysecretkeysecretkey"))
-        };
-    });
+builder.Services.AddApiAuthentication(builder.Configuration);
 
 builder.Services.AddAuthorization();
 
