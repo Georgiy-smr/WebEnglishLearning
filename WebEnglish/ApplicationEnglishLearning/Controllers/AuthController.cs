@@ -33,17 +33,19 @@ public class AuthController : ControllerBase
         IStatusGeneric resultAddedNewUser = await _loginService.Register(userAuth.UserName, userAuth.PassWord);
         return Ok(resultAddedNewUser);
     }
+
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] UserToAuth userAuth)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        var resultLogin = await _loginService.CreateToken(userAuth.UserName, userAuth.PassWord);
+        IStatusGeneric<string> resultLogin = await _loginService.CreateToken(userAuth.UserName, userAuth.PassWord);
 
         if(resultLogin.HasErrors)
             return BadRequest(resultLogin);
 
+        HttpContext.Response.Cookies.Append("jwt", resultLogin.Result);
         return Ok(resultLogin.Result);
     }
 

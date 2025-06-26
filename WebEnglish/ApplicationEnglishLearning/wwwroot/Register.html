@@ -47,7 +47,7 @@
                 alert('Пожалуйста, введите пароль');
                 return;
             }
-            fetch('https://192.168.1.125:7041/Auth/register', {
+        fetch('https://10.13.60.40:7041/Auth/register', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -61,7 +61,7 @@
                 if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
                 return res.json();
             }).then(result => {
-                document.getElementById('response').textContent = 'Ответ отправлен. Результат: \n' + result;
+                document.getElementById('response').textContent = 'Ответ отправлен. Результат: \n' + JSON.stringify(result, null, 2);;
             }).catch(err => {
                 document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
             });
