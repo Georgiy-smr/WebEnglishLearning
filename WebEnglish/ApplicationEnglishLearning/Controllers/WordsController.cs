@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using ApplicationEnglishLearning.Models;
@@ -44,10 +45,13 @@ namespace ApplicationEnglishLearning.Controllers
                 {
                     x => x.User != null & x.User!.Id == userId,
                 },
-                Includes = new List<Expression<Func<Word, object>>>(),
+                Includes = new List<Expression<Func<Word, object>>>()
+                {
+                    x => x.User!
+                },
+                OrderBy = word => word.Id,
                 Size = 500,
                 ZeroStart = 0,
-                Tracked = false
             });
 
             if (resultGet.HasErrors)
@@ -73,6 +77,7 @@ namespace ApplicationEnglishLearning.Controllers
                     x => x.RusWord == wordFromDictionary.RussianWord
                 },
                 Includes = new List<Expression<Func<Word, object>>>(),
+                OrderBy = word => word.Id,
                 Size = 1,
                 ZeroStart = 0
             });
@@ -107,6 +112,7 @@ namespace ApplicationEnglishLearning.Controllers
                          x.RusWord == wordFromDictionary.RussianWord
                 },
                 Includes = new List<Expression<Func<Word, object>>>(),
+                OrderBy = word => word.Id,
                 Size = 10,
                 ZeroStart = 0
             });
@@ -122,6 +128,7 @@ namespace ApplicationEnglishLearning.Controllers
 
             if (resultAdd.HasErrors)
                 return BadRequest(string.Join(";", resultAdd.Errors));
+
 
             return Ok(resultAdd.Message);
         }
@@ -141,6 +148,7 @@ namespace ApplicationEnglishLearning.Controllers
                     x => x.User != null & x.User!.Id == userId,
                 } ,
                 Includes = new List<Expression<Func<Word, object>>>(),
+                OrderBy = word => word.Id,
                 Size = 500,
                 ZeroStart = 0
             });
@@ -189,6 +197,7 @@ namespace ApplicationEnglishLearning.Controllers
                     x => x.RusWord == wordToTest.RussianWord
                 },
                 Includes = new List<Expression<Func<Word, object>>>(),
+                OrderBy = word => word.Id,
                 Size = 1,
                 ZeroStart = 0
             });

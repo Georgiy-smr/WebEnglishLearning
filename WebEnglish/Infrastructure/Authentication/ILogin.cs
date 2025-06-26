@@ -6,6 +6,7 @@ using Repository.DTO;
 using StatusGeneric;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 using Repository.Commands.Create;
 
 namespace Infrastructure.Authentication;
@@ -50,6 +51,7 @@ public class UserService : ILogin
             Includes = new List<Expression<Func<User, object>>>()
             {
             },
+            OrderBy = user => user.Id,
             Size = 1,
             ZeroStart = 0
         };
