@@ -1,4 +1,3 @@
-using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
 using DataBaseServices;
 using ApplicationEnglishLearning.Extensions;
@@ -32,7 +31,6 @@ builder.Services.AddTransient<IGenerateToken, Jwt>();
 builder.Services.Configure<BdSettings>(
     builder.Configuration.GetSection("DataBase"));
 builder.Services.AddDataBaseServices();
-builder.Services.AddSingleton<ITranslateDictionary<string, string>, TranslateCollection>();
 builder.Services.AddApiAuthentication(builder.Configuration);
 
 builder.Services.AddAuthorization();

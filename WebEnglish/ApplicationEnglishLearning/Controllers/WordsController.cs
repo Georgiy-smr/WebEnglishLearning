@@ -1,7 +1,6 @@
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using ApplicationEnglishLearning.Models;
-using ApplicationEnglishLearning.Services;
 using ApplicationEnglishLearning.Validate;
 using Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -21,13 +20,12 @@ namespace ApplicationEnglishLearning.Controllers
     {
         private readonly IRepository _repository;
         private readonly ILogger<WordsController> _logger;
-        private readonly ITranslateDictionary<string, string> _translateDictionary;
 
-        public WordsController(ILogger<WordsController> logger,
-            ITranslateDictionary<string, string> translateDictionary, IRepository repository)
+        public WordsController(
+            ILogger<WordsController> logger, 
+            IRepository repository)
         {
             _logger = logger;
-            _translateDictionary = translateDictionary;
             _repository = repository;
         }
 
