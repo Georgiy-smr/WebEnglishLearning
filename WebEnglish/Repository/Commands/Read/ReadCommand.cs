@@ -8,7 +8,7 @@ using Entities;
 
 namespace Repository.Commands.Read
 {
-    public abstract record ReadCommand<T> where T : IEntity, new()
+    public abstract record ReadCommand<T>(bool Tracked = true) where T : IEntity, new()
     {
         public required IEnumerable<Expression<Func<T, bool>>>? Filters { get; init; }
         public required IEnumerable<Expression<Func<T, object>>>? Includes { get; init; }

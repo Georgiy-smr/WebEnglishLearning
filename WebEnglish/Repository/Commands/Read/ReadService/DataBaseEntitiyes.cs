@@ -12,9 +12,9 @@ public class DataBaseEntitiyes<T> : IEntityCollection<T> where T : Entity, new()
     {
         _Set = DB.Set<T>();
     }
-    public IQueryable<T> Get(ReadCommand<T> command, bool tracked = true)
+    public IQueryable<T> Get(ReadCommand<T> command)
     {
-        var query = tracked ? _Set.AsQueryable() : _Set.AsQueryable().AsNoTracking();
+        var query = command.Tracked ? _Set.AsQueryable() : _Set.AsQueryable().AsNoTracking();
         return query
             .ApplyFilters(command.Filters)
             .ApplyInclude(command.Includes)

@@ -37,7 +37,8 @@ namespace ApplicationEnglishLearning.Controllers
 
             int userId = int.Parse(User.FindFirst("userId")?.Value!);
 
-            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
+            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(
+                new GetWordsRequest()
             {
                 Filters = new List<Expression<Func<Word, bool>>>()
                 {
@@ -45,7 +46,8 @@ namespace ApplicationEnglishLearning.Controllers
                 },
                 Includes = new List<Expression<Func<Word, object>>>(),
                 Size = 500,
-                ZeroStart = 0
+                ZeroStart = 0,
+                Tracked = false
             });
 
             if (resultGet.HasErrors)

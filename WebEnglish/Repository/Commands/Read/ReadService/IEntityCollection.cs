@@ -7,6 +7,5 @@ namespace Repository.Commands.Read.ReadService;
 public interface IEntityCollection<T> where T : IEntity, new()
 {
     IQueryable<T> Get(
-        ReadCommand<T> command,
-        bool tracked = true);
+        ReadCommand<T> command);
 }
