@@ -31,8 +31,9 @@ namespace ApplicationEnglishLearning.Controllers
         }
 
         [Authorize]
-        [HttpGet(Name = "words")]
-        public async Task<ActionResult<IEnumerable<WordFromDictionary>>> Index()
+        //[HttpGet(Name = "words")]
+        [HttpGet("List/{page}")]
+        public async Task<ActionResult<IEnumerable<WordFromDictionary>>> Index(int page)
         {
             var s = User.Claims;
 
@@ -49,8 +50,8 @@ namespace ApplicationEnglishLearning.Controllers
                 {
                     x => x.User!
                 },
-                Size = 500,
-                ZeroStart = 0,
+                Size = 10,
+                ZeroStart = page - 1 ,
             });
 
             if (resultGet.HasErrors)

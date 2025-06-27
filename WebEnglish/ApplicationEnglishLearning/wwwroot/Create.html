@@ -69,7 +69,10 @@
             alert('Пожалуйста, введите перевод слова!');
             return;
         }
-        fetch('https://10.13.60.40:7041/Words/CreateWord', {
+
+        var ip = 'https://192.168.1.125:7041/Words/CreateWord';
+
+        fetch(ip, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',

@@ -47,7 +47,7 @@
             return;
 
         countLabel.innerText = currentCount - 1;
-
+        document.getElementById('getWordsButton').click();
     });
 
     document.getElementById('nextButton').addEventListener('click', function () {
@@ -58,6 +58,8 @@
             return;
 
         countLabel.innerText = currentCount + 1;
+        document.getElementById('getWordsButton').click();
+
     });
 
         let currentEnglishWord = '';
@@ -75,8 +77,11 @@
             else {
                 alert('Залогинься!');
             }
+            const countLabel = document.getElementById('countPageLabel');
 
-            fetch('https://10.13.60.40:7041/Words',
+            var ip = 'https://192.168.1.125:7041/Words/List/' + countLabel.innerText;
+
+            fetch(ip,
                 {
                     method: 'GET',
                     headers: {
@@ -141,7 +146,10 @@
                 alert('Нету русского слова');
                 return;
             }
-            fetch('https://10.13.60.40:7041/Words/DeleteWord', {
+
+            var ip = 'https://192.168.1.125/Words/DeleteWord';
+
+            fetch(ip, {
                 method: 'DELETE',
                 headers: {
                     'Accept': 'application/json',
