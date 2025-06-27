@@ -19,10 +19,15 @@
     <h1>Получить список слов</h1>
     <button id="getWordsButton">Получить</button>
     <div id="wordsList"></div>
-<button id="deleteButton">
-	Удалить
-</button>
-<div id="response"></div>
+
+    <div id="response"></div>
+
+    <button id="backButton">Back</button>
+    <label>#</label>
+	<label id="countPageLabel">1</label>
+	<button id="nextButton">Next</button>
+
+    <button id="deleteButton">Удалить</button>
 
 <script>
 
@@ -33,31 +38,52 @@
         return cookie ? cookie.split('=')[1] : null;
     }
 
+    document.getElementById('backButton').addEventListener('click', function ()
+    {
+        const countLabel = document.getElementById('countPageLabel');
+        var currentCount = parseInt(countLabel.innerText);
+
+        if (currentCount <= 1)
+            return;
+
+        countLabel.innerText = currentCount - 1;
+
+    });
+
+    document.getElementById('nextButton').addEventListener('click', function () {
+        const countLabel = document.getElementById('countPageLabel');
+        var currentCount = parseInt(countLabel.innerText);
+
+        if (currentCount >= 10)
+            return;
+
+        countLabel.innerText = currentCount + 1;
+    });
 
         let currentEnglishWord = '';
         let currrentRussianWord = '';
-    document.getElementById('getWordsButton').addEventListener('click', function () {
+        document.getElementById('getWordsButton').addEventListener('click', function () {
 
-        const tokenFromCookie = getCookie('jwt');
-        const tokenFromStorage = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
+            const tokenFromCookie = getCookie('jwt');
+            const tokenFromStorage = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
 
-        var token = "";
-        if (tokenFromCookie)
-            token = tokenFromCookie;
-        else if (tokenFromStorage)
-            token = tokenFromStorage;
-        else {
-            alert('Залогинься!');
-        }
+            var token = "";
+            if (tokenFromCookie)
+                token = tokenFromCookie;
+            else if (tokenFromStorage)
+                token = tokenFromStorage;
+            else {
+                alert('Залогинься!');
+            }
 
-        fetch('https://10.13.60.40:7041/Words',
-            {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Authorization': 'Bearer ' + token
-                }
-            }).then(response => {
+            fetch('https://10.13.60.40:7041/Words',
+                {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': 'Bearer ' + token
+                    }
+                }).then(response => {
                     if (!response.ok) {
                         throw new Error('Сеть ответила с ошибкой: ' + response.status);
                     }
