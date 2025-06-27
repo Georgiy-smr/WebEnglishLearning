@@ -15,7 +15,7 @@ namespace Repository.Commands.Read
     {
         public required IEnumerable<Expression<Func<T, bool>>>? Filters { get; init; }
         public required IEnumerable<Expression<Func<T, object>>>? Includes { get; init; }
-        public required Expression<Func<T, object>> OrderBy { get; init; }
+        public Expression<Func<T, object>> OrderBy { get; init; } = x => x.Id;
         public required int Size { get; init; }
         public required int ZeroStart { get; init; }
     }
