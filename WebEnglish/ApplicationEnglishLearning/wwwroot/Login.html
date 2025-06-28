@@ -26,6 +26,9 @@
         <button id="login">
             Войти
         </button>
+	    <button id="toRegisterPage">
+		    Регистрация
+	    </button>
     </div>
     <div id="response">
 
@@ -71,6 +74,11 @@
                 document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
             });
         });
+
+    document.getElementById('toRegisterPage').addEventListener('click', () => {
+        window.location.href = 'https://192.168.1.125:7041/register.html';
+    });
+
     </script>
 </body>
 </html>
