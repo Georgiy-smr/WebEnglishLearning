@@ -83,9 +83,14 @@
                 englishWord: engWordContent,
                 russianWord: rusWordContent
             })
-        }).then(res => {
-            if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
-            return res.json();
+        }).then(response => {
+
+            if (response.status === 401) {
+                window.location.href = 'https://192.168.1.125:7041/login.html';
+                return;
+            }
+            if (!response.ok) throw new Error('Ошибка сети: ' + response.status);
+            return response.json();
         }).then(result => {
             document.getElementById('response').textContent = 'Ответ отправлен. Результат: \n' + JSON.stringify(result);
         }).catch(err => {

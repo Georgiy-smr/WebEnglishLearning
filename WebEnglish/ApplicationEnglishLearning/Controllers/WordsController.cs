@@ -31,7 +31,6 @@ namespace ApplicationEnglishLearning.Controllers
         }
 
         [Authorize]
-        //[HttpGet(Name = "words")]
         [HttpGet("List/{page}")]
         public async Task<ActionResult<IEnumerable<WordFromDictionary>>> Index(int page)
         {

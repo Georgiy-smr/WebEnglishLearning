@@ -89,6 +89,12 @@
                         'Authorization': 'Bearer ' + token
                     }
                 }).then(response => {
+
+                    if (response.status === 401) {
+                        window.location.href = 'https://192.168.1.125:7041/login.html';
+                        return;
+                    }
+
                     if (!response.ok) {
                         throw new Error('Сеть ответила с ошибкой: ' + response.status);
                     }
