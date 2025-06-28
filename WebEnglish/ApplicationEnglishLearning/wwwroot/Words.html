@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Слова</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #wordsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Учим англиские слова</h1>
+
+    <div>
+        <h2>Вход: </h2>
+
+        <button id="login">
+            Войти
+        </button>
+
+        <button id="registr">
+            Зарегистрироватья
+        </button>
+
+    </div>
+
+
+    <div>
+        <h2>Действия со словами:  </h2>
+
+        <button id="getAll">
+            Посмотеть все
+        </button>
+
+        <button id="create">
+            Создать
+        </button>
+        
+        <button id="test">
+            Проверка
+        </button>
+
+    </div>
+
+
+<script>
+
+    document.getElementById('login').addEventListener('click', () => {
+        window.location.href = 'https://192.168.1.125:7041/login.html';
+        });
+
+    document.getElementById('registr').addEventListener('click', () => {
+        window.location.href = 'https://192.168.1.125:7041/register.html';
+        });
+
+    document.getElementById('getAll').addEventListener('click', () => {
+        window.location.href = 'https://192.168.1.125:7041/GetAll.html';
+        });
+
+    document.getElementById('create').addEventListener('click', () => {
+        window.location.href = 'https://192.168.1.125:7041/Create.html';
+        });
+
+    document.getElementById('test').addEventListener('click', () => {
+        window.location.href = 'https://192.168.1.125:7041/Test.html';
+        });
+
+    </script>
+</body>
+</html>
+
