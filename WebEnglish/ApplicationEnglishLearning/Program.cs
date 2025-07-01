@@ -2,6 +2,8 @@ using ApplicationEnglishLearning.Validate;
 using DataBaseServices;
 using ApplicationEnglishLearning.Extensions;
 using Infrastructure.Authentication;
+using Microsoft.Extensions.Configuration;
+using System.Runtime;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,8 +30,22 @@ builder.Services.AddTransient<ILogin, UserService>();
 builder.Services.Configure<JwtOptions>(
     builder.Configuration.GetSection(nameof(JwtOptions)));
 builder.Services.AddTransient<IGenerateToken, Jwt>();
-builder.Services.Configure<BdSettings>(
-    builder.Configuration.GetSection("DataBase"));
+
+
+//builder.Services
+//    .AddOptionsWithValidateOnStart<BdSettings>()
+//    .Bind(builder.Configuration.GetSection("DataBase"))
+//    .ValidateDataAnnotations()
+//    .Validate(settings => !string.IsNullOrEmpty(settings.ConnectionStrings?.PostgreSQL), "ConnectionString cannot be empty")
+//    .ValidateOnStart();
+
+builder.Services.AddOptions<BdSettings>()
+    .Bind(builder.Configuration.GetSection("DataBase"))
+    .ValidateDataAnnotations()
+    .Validate(settings => !string.IsNullOrEmpty(settings.ConnectionStrings?.PostgreSQL), "ConnectionString cannot be empty")
+    .ValidateOnStart(); // Валидация при старте приложения
+
+
 builder.Services.AddDataBaseServices();
 builder.Services.AddApiAuthentication(builder.Configuration);
 
