@@ -15,7 +15,7 @@ namespace Infrastructure.Authentication
         {
             public string Generate(UserDto user)
             {
-                throw new NotImplementedException();
+                return "new fake token";
             }
         }
 

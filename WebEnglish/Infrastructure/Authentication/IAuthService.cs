@@ -18,7 +18,7 @@ public interface IAuthService
 
         public IValidatePassword CreateValidating(string hashed)
         {
-            throw new NotImplementedException();
+            return new IValidatePassword.Fake();
         }
     }
 
