@@ -20,13 +20,10 @@ namespace ApplicationEnglishLearning.Controllers
     public class WordsController : ControllerBase
     {
         private readonly IRepository _repository;
-        private readonly ILogger<WordsController> _logger;
 
         public WordsController(
-            ILogger<WordsController> logger, 
             IRepository repository)
         {
-            _logger = logger;
             _repository = repository;
         }
 

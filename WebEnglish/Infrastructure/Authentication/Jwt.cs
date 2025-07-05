@@ -10,6 +10,15 @@ namespace Infrastructure.Authentication
     public interface IGenerateToken
     {
         string Generate(UserDto user);
+
+        public class Fake : IGenerateToken
+        {
+            public string Generate(UserDto user)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
     }
     public class Jwt : IGenerateToken
     {

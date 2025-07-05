@@ -14,4 +14,19 @@ public interface IRepository
     Task<IStatusGeneric<IEnumerable<TDto>>> GetItemsAsync<TDto>(
         IRequest<IStatusGeneric<IEnumerable<TDto>>> command, CancellationToken token = default)
         where TDto : BaseDto;
+
+    public class Fake : IRepository
+    {
+        public Task<IStatusGeneric> DataBaseOperationAsync(BaseCommandDataBase command, CancellationToken token = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IStatusGeneric<IEnumerable<TDto>>> GetItemsAsync<TDto>(IRequest<IStatusGeneric<IEnumerable<TDto>>> command, CancellationToken token = default) where TDto : BaseDto
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
 }
