@@ -19,7 +19,12 @@ public interface IRepository
     {
         public Task<IStatusGeneric> DataBaseOperationAsync(BaseCommandDataBase command, CancellationToken token = default)
         {
-            throw new NotImplementedException();
+            var status = new StatusGenericHandler()
+            {
+                Header = command.ToString(),
+                Message = "I Fake status"
+            };
+            return Task.FromResult<IStatusGeneric>(status);
         }
 
         public Task<IStatusGeneric<IEnumerable<TDto>>> GetItemsAsync<TDto>(IRequest<IStatusGeneric<IEnumerable<TDto>>> command, CancellationToken token = default) where TDto : BaseDto
