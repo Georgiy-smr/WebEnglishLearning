@@ -1,0 +1,6 @@
+wwwroot\Create.html
+wwwroot\GetAll.html
+wwwroot\Login.html
+wwwroot\Register.html
+wwwroot\Test.html
+wwwroot\Words.html

@@ -435,12 +435,18 @@
           "Microsoft.EntityFrameworkCore.Relational": "9.0.6"
         },
         "runtime": {
-          "ContextDataBase.dll": {}
+          "ContextDataBase.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Entities/1.0.0": {
         "runtime": {
-          "Entities.dll": {}
+          "Entities.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Repository/1.0.0": {
@@ -452,7 +458,10 @@
           "Microsoft.Extensions.DependencyInjection": "9.0.6"
         },
         "runtime": {
-          "Repository.dll": {}
+          "Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
