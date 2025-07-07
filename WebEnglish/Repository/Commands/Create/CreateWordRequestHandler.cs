@@ -7,7 +7,7 @@ using StatusGeneric;
 
 namespace Repository.Commands.Create;
 
-public record CreateWordRequestHandler : IRequestHandler<CreateWordRequest, IStatusGeneric>
+public record CreateWordRequestHandler : IRequestHandler<RequestCreateWordRequest, IStatusGeneric>
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<CreateWordRequestHandler> _logger;
@@ -19,7 +19,7 @@ public record CreateWordRequestHandler : IRequestHandler<CreateWordRequest, ISta
         _logger = logger;
     }
 
-    public async Task<IStatusGeneric> Handle(CreateWordRequest request, CancellationToken cancellationToken)
+    public async Task<IStatusGeneric> Handle(RequestCreateWordRequest request, CancellationToken cancellationToken)
     {
         _logger.LogInformation($"{request} Started");
         StatusGenericHandler status = new StatusGenericHandler();

@@ -8,7 +8,7 @@ using StatusGeneric;
 
 namespace Repository.Commands.Update;
 
-public record UpdateWordRequestHandler : IRequestHandler<UpdateWordRequest, IStatusGeneric>
+public record UpdateWordRequestHandler : IRequestHandler<RequestUpdateWordRequest, IStatusGeneric>
 {
     private readonly IServiceProvider _serviceProvider;
     ILogger<UpdateWordRequestHandler> _logger;
@@ -20,7 +20,7 @@ public record UpdateWordRequestHandler : IRequestHandler<UpdateWordRequest, ISta
     }
 
 
-    public async Task<IStatusGeneric> Handle(UpdateWordRequest request, CancellationToken cancellationToken)
+    public async Task<IStatusGeneric> Handle(RequestUpdateWordRequest request, CancellationToken cancellationToken)
     {
         string msg = $"{nameof(UpdateWordRequestHandler)} {request}";
         _logger.LogInformation(msg);

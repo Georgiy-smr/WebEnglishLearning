@@ -13,8 +13,7 @@ using StatusGeneric;
 namespace Repository.Commands.Read
 {
     public record GetWordsRequest() :
-        ReadCommand<Word>,
-        IRequest<IStatusGeneric<IEnumerable<WordDto>>>
+            ReadCommandRequest<Word,WordDto>
     {
         public override string ToString()
         {

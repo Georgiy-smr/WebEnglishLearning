@@ -3,13 +3,12 @@ using MediatR;
 using Repository.Commands;
 using Repository.DTO;
 using StatusGeneric;
-
 namespace Repository;
 
 public interface IRepository
 {
     Task<IStatusGeneric> DataBaseOperationAsync(
-        BaseCommandDataBase command,
+        OperationRequestFromDataBase requestCommand,
         CancellationToken token = default);
 
     Task<IStatusGeneric<IEnumerable<TDto>>> GetItemsAsync<TDto>(
@@ -18,11 +17,11 @@ public interface IRepository
 
     public class Fake : IRepository
     {
-        public Task<IStatusGeneric> DataBaseOperationAsync(BaseCommandDataBase command, CancellationToken token = default)
+        public Task<IStatusGeneric> DataBaseOperationAsync(OperationRequestFromDataBase requestCommand, CancellationToken token = default)
         {
             var status = new StatusGenericHandler()
             {
-                Header = command.ToString(),
+                Header = requestCommand.ToString(),
                 Message = "I Fake status"
             };
             return Task.FromResult<IStatusGeneric>(status);

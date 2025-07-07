@@ -80,11 +80,11 @@ namespace DataBaseTests
 
             var sut = scope.ServiceProvider.GetRequiredService<IRepository>();
 
-            CreateWordRequest createCommand = new CreateWordRequest(new WordDto("Mom", "Мама"));
+            RequestCreateWordRequest requestCreateCommand = new RequestCreateWordRequest(new WordDto("Mom", "Мама"));
 
             //Act
 
-            IStatusGeneric resultCollection = await sut.DataBaseOperationAsync(createCommand);
+            IStatusGeneric resultCollection = await sut.DataBaseOperationAsync(requestCreateCommand);
 
             //Assert
             
@@ -145,9 +145,9 @@ namespace DataBaseTests
 
             //Act
 
-            UpdateWordRequest updateCommand = new UpdateWordRequest(oldWord with { Rus = "Привет!", Eng = "Hello!" });
+            RequestUpdateWordRequest requestUpdateCommand = new RequestUpdateWordRequest(oldWord with { Rus = "Привет!", Eng = "Hello!" });
 
-            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(updateCommand);
+            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(requestUpdateCommand);
 
             Assert.True(resultUpdate.IsValid);
 
@@ -209,9 +209,9 @@ namespace DataBaseTests
 
             //Act
 
-            DeleteWordRequest deleteCommand = new DeleteWordRequest(toRemove);
+            RequestDeleteWordRequest requestDeleteCommand = new RequestDeleteWordRequest(toRemove);
 
-            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(deleteCommand);
+            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(requestDeleteCommand);
 
             Assert.True(resultUpdate.IsValid);
 

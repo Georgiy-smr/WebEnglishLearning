@@ -10,20 +10,20 @@ using StatusGeneric;
 
 namespace Repository.Commands.Delete;
 
-public record BaseDeleteCommand(int IdEntity) : BaseCommandDataBase();
+public record OperationRequestFromDataBaseRequestDeleteCommand(int IdEntity) : OperationRequestFromDataBase();
 
-public record DeleteWordRequest(int Id) : BaseDeleteCommand(Id)
+public record RequestDeleteWordRequest(int Id) : OperationRequestFromDataBaseRequestDeleteCommand(Id)
 {
-    public DeleteWordRequest(BaseDto wordToRemove) : this(wordToRemove.Id) {}
-    public DeleteWordRequest(IEntity entityToRemove) : this(entityToRemove.Id) { }
+    public RequestDeleteWordRequest(BaseDto wordToRemove) : this(wordToRemove.Id) {}
+    public RequestDeleteWordRequest(IEntity entityToRemove) : this(entityToRemove.Id) { }
     public override string ToString()
     {
-        string name = $"{nameof(DeleteWordRequest)} {Id}";
+        string name = $"{nameof(RequestDeleteWordRequest)} {Id}";
         return base.ToString();
     }
 }
 
-public record DeleteWordRequestHandler : IRequestHandler<DeleteWordRequest, IStatusGeneric>
+public record DeleteWordRequestHandler : IRequestHandler<RequestDeleteWordRequest, IStatusGeneric>
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<DeleteWordRequestHandler> _logger;
@@ -34,7 +34,7 @@ public record DeleteWordRequestHandler : IRequestHandler<DeleteWordRequest, ISta
         _logger = logger;
     }
 
-    public async Task<IStatusGeneric> Handle(DeleteWordRequest request, CancellationToken cancellationToken)
+    public async Task<IStatusGeneric> Handle(RequestDeleteWordRequest request, CancellationToken cancellationToken)
     {
         string msg = $"{nameof(DeleteWordRequestHandler)} {request}";
         _logger.LogInformation($"{msg}");

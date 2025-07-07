@@ -51,11 +51,11 @@ namespace DataBaseTests
             string newName = "topName" + Random.Shared.NextInt64(long.MaxValue);
 
 
-            CreateUserRequest createCommand = new CreateUserRequest(new UserDto(newName, "2308"));
+            RequestCreateUserRequest requestCreateCommand = new RequestCreateUserRequest(new UserDto(newName, "2308"));
 
             //Act
 
-            IStatusGeneric resultAddedNewUser = await sut.DataBaseOperationAsync(createCommand);
+            IStatusGeneric resultAddedNewUser = await sut.DataBaseOperationAsync(requestCreateCommand);
 
             //Assert
 

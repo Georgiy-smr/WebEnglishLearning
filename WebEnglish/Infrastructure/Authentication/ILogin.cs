@@ -71,10 +71,10 @@ public class UserService : ILogin
         string password,
         CancellationToken cancellationToken = default)
     {
-        CreateUserRequest createCommand = new CreateUserRequest(
+        RequestCreateUserRequest requestCreateCommand = new RequestCreateUserRequest(
             new UserDto(userName,
                 _hashService.Hash(password).GetHashed()));
 
-        return await _repository.DataBaseOperationAsync(createCommand, cancellationToken);
+        return await _repository.DataBaseOperationAsync(requestCreateCommand, cancellationToken);
     }
 }

@@ -22,10 +22,10 @@ public class Repository : IRepository
     }
 
     public Task<IStatusGeneric> DataBaseOperationAsync(
-        BaseCommandDataBase command,
+        OperationRequestFromDataBase requestCommand,
         CancellationToken token = default)
     {
-        return _mediator.Send(command, token);
+        return _mediator.Send(requestCommand, token);
     }
 
 }

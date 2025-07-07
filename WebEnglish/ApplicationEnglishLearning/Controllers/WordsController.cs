@@ -81,7 +81,7 @@ namespace ApplicationEnglishLearning.Controllers
                 return BadRequest(string.Join(";", resultGet.Errors));
 
             WordDto wordToRemove = resultGet.Result.Single();
-            IStatusGeneric resultRemove = await _repository.DataBaseOperationAsync(new DeleteWordRequest(wordToRemove));
+            IStatusGeneric resultRemove = await _repository.DataBaseOperationAsync(new RequestDeleteWordRequest(wordToRemove));
 
             if (resultRemove.HasErrors)
                 return BadRequest(string.Join(";", resultRemove.Errors));
@@ -115,7 +115,7 @@ namespace ApplicationEnglishLearning.Controllers
                 return BadRequest(new { error = "Есть совпадения в словаре." });
 
             IStatusGeneric resultAdd = await _repository.DataBaseOperationAsync(
-                new CreateWordRequest(new WordDto(
+                new RequestCreateWordRequest(new WordDto(
                     Eng: wordFromDictionary.EnglishWord,
                     Rus: wordFromDictionary.RussianWord,
                     UserId: userId)));
