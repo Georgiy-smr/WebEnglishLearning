@@ -4,11 +4,12 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Repository.Commands.Create.Words;
 using StatusGeneric;
 
-namespace Repository.Commands.Create;
+namespace Repository.Commands.Create.Users;
 
-public record CreateUserRequestHandler : IRequestHandler<RequestCreateUserRequest, IStatusGeneric>
+public record CreateUserRequestHandler : IRequestHandler<CreateUserRequest, IStatusGeneric>
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<CreateWordRequestHandler> _logger;
@@ -20,9 +21,9 @@ public record CreateUserRequestHandler : IRequestHandler<RequestCreateUserReques
         _logger = logger;
     }
 
-    public async Task<IStatusGeneric> Handle(RequestCreateUserRequest request, CancellationToken cancellationToken)
+    public async Task<IStatusGeneric> Handle(CreateUserRequest createUserRequest, CancellationToken cancellationToken)
     {
-        _logger.LogInformation($"{request} Started");
+        _logger.LogInformation($"{createUserRequest} Started");
         StatusGenericHandler status = new StatusGenericHandler();
 
         try
@@ -31,14 +32,14 @@ public record CreateUserRequestHandler : IRequestHandler<RequestCreateUserReques
             var context = scope.ServiceProvider.GetService<AppDbContext>();
 
 
-            if (await context.Users.AnyAsync(x => x.UserName == request.NewUserDto.Name,
+            if (await context.Users.AnyAsync(x => x.UserName == createUserRequest.NewUserDto.Name,
                     cancellationToken: cancellationToken))
                 throw new Exception("Такой пользователь уже существует!");
 
             await context!.AddAsync(new User()
                 {
-                    UserName = request.NewUserDto.Name,
-                    PasswordHash = request.NewUserDto.HashPass,
+                    UserName = createUserRequest.NewUserDto.Name,
+                    PasswordHash = createUserRequest.NewUserDto.HashPass,
                 }, cancellationToken)
                 .ConfigureAwait(false);
 
@@ -51,7 +52,7 @@ public record CreateUserRequestHandler : IRequestHandler<RequestCreateUserReques
             _logger.LogError(e.ToString());
             status.AddError(e, e.Message);
         }
-        _logger.LogInformation($"{request} Finish");
+        _logger.LogInformation($"{createUserRequest} Finish");
         return status;
     }
 }

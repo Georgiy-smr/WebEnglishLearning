@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using Repository.Commands.Create;
+using Repository.Commands.Create.Words;
 using Repository.Commands.Delete;
+using Repository.Commands.Delete.Words;
 using Repository.Commands.Read;
 using Repository.DTO;
 using StatusGeneric;
@@ -81,7 +83,7 @@ namespace ApplicationEnglishLearning.Controllers
                 return BadRequest(string.Join(";", resultGet.Errors));
 
             WordDto wordToRemove = resultGet.Result.Single();
-            IStatusGeneric resultRemove = await _repository.DataBaseOperationAsync(new RequestDeleteWordRequest(wordToRemove));
+            IStatusGeneric resultRemove = await _repository.DataBaseOperationAsync(new DeleteWordRequest(wordToRemove));
 
             if (resultRemove.HasErrors)
                 return BadRequest(string.Join(";", resultRemove.Errors));
@@ -115,7 +117,7 @@ namespace ApplicationEnglishLearning.Controllers
                 return BadRequest(new { error = "Есть совпадения в словаре." });
 
             IStatusGeneric resultAdd = await _repository.DataBaseOperationAsync(
-                new RequestCreateWordRequest(new WordDto(
+                new CreateWordRequest(new WordDto(
                     Eng: wordFromDictionary.EnglishWord,
                     Rus: wordFromDictionary.RussianWord,
                     UserId: userId)));

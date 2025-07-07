@@ -1,29 +1,14 @@
 ﻿using ContextDataBase;
-using DataBaseOperationHelper.Abstractions;
-using Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Repository.DTO;
 using StatusGeneric;
 
-namespace Repository.Commands.Delete;
+namespace Repository.Commands.Delete.Words;
 
-public record OperationRequestFromDataBaseRequestDeleteCommand(int IdEntity) : OperationRequestFromDataBase();
-
-public record RequestDeleteWordRequest(int Id) : OperationRequestFromDataBaseRequestDeleteCommand(Id)
-{
-    public RequestDeleteWordRequest(BaseDto wordToRemove) : this(wordToRemove.Id) {}
-    public RequestDeleteWordRequest(IEntity entityToRemove) : this(entityToRemove.Id) { }
-    public override string ToString()
-    {
-        string name = $"{nameof(RequestDeleteWordRequest)} {Id}";
-        return base.ToString();
-    }
-}
-
-public record DeleteWordRequestHandler : IRequestHandler<RequestDeleteWordRequest, IStatusGeneric>
+/// <inheritdoc />
+public record DeleteWordRequestHandler : IRequestHandler<DeleteWordRequest, IStatusGeneric>
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ILogger<DeleteWordRequestHandler> _logger;
@@ -34,9 +19,9 @@ public record DeleteWordRequestHandler : IRequestHandler<RequestDeleteWordReques
         _logger = logger;
     }
 
-    public async Task<IStatusGeneric> Handle(RequestDeleteWordRequest request, CancellationToken cancellationToken)
+    public async Task<IStatusGeneric> Handle(DeleteWordRequest deleteWordRequest, CancellationToken cancellationToken)
     {
-        string msg = $"{nameof(DeleteWordRequestHandler)} {request}";
+        string msg = $"{nameof(DeleteWordRequestHandler)} {deleteWordRequest}";
         _logger.LogInformation($"{msg}");
         StatusGenericHandler status = new StatusGenericHandler()
         {
@@ -47,10 +32,10 @@ public record DeleteWordRequestHandler : IRequestHandler<RequestDeleteWordReques
         try
         {
             var context = provider.GetRequiredService<AppDbContext>();
-            var toRemove = await context.Words.SingleAsync(x => x.Id == request.Id, cancellationToken: cancellationToken);
+            var toRemove = await context.Words.SingleAsync(x => x.Id == deleteWordRequest.Id, cancellationToken: cancellationToken);
             toRemove.SoftDeleted = true;
             await context.SaveChangesAsync(cancellationToken);
-            _logger.LogInformation($"{request} is success");
+            _logger.LogInformation($"{deleteWordRequest} is success");
         }
         catch (Exception e)
         {

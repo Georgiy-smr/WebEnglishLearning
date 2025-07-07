@@ -13,6 +13,7 @@ using Repository.Commands.Create;
 using Repository.Commands.Read;
 using Repository.DTO;
 using Repository;
+using Repository.Commands.Create.Users;
 using StatusGeneric;
 
 namespace DataBaseTests
@@ -51,11 +52,11 @@ namespace DataBaseTests
             string newName = "topName" + Random.Shared.NextInt64(long.MaxValue);
 
 
-            RequestCreateUserRequest requestCreateCommand = new RequestCreateUserRequest(new UserDto(newName, "2308"));
+            CreateUserRequest createUserRequestCreateCommand = new CreateUserRequest(new UserDto(newName, "2308"));
 
             //Act
 
-            IStatusGeneric resultAddedNewUser = await sut.DataBaseOperationAsync(requestCreateCommand);
+            IStatusGeneric resultAddedNewUser = await sut.DataBaseOperationAsync(createUserRequestCreateCommand);
 
             //Assert
 

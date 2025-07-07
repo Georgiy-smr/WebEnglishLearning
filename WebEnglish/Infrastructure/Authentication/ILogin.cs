@@ -8,6 +8,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Security.Cryptography.X509Certificates;
 using Repository.Commands.Create;
+using Repository.Commands.Create.Users;
 
 namespace Infrastructure.Authentication;
 
@@ -71,10 +72,10 @@ public class UserService : ILogin
         string password,
         CancellationToken cancellationToken = default)
     {
-        RequestCreateUserRequest requestCreateCommand = new RequestCreateUserRequest(
+        CreateUserRequest createUserRequestCreateCommand = new CreateUserRequest(
             new UserDto(userName,
                 _hashService.Hash(password).GetHashed()));
 
-        return await _repository.DataBaseOperationAsync(requestCreateCommand, cancellationToken);
+        return await _repository.DataBaseOperationAsync(createUserRequestCreateCommand, cancellationToken);
     }
 }

@@ -6,7 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Repository;
 using Repository.Commands.Create;
+using Repository.Commands.Create.Words;
 using Repository.Commands.Delete;
+using Repository.Commands.Delete.Words;
 using Repository.Commands.Read;
 using Repository.Commands.Update;
 using Repository.DTO;
@@ -80,11 +82,11 @@ namespace DataBaseTests
 
             var sut = scope.ServiceProvider.GetRequiredService<IRepository>();
 
-            RequestCreateWordRequest requestCreateCommand = new RequestCreateWordRequest(new WordDto("Mom", "Мама"));
+            CreateWordRequest createWordRequestCreateCommand = new CreateWordRequest(new WordDto("Mom", "Мама"));
 
             //Act
 
-            IStatusGeneric resultCollection = await sut.DataBaseOperationAsync(requestCreateCommand);
+            IStatusGeneric resultCollection = await sut.DataBaseOperationAsync(createWordRequestCreateCommand);
 
             //Assert
             
@@ -209,9 +211,9 @@ namespace DataBaseTests
 
             //Act
 
-            RequestDeleteWordRequest requestDeleteCommand = new RequestDeleteWordRequest(toRemove);
+            DeleteWordRequest deleteWordRequestDeleteCommand = new DeleteWordRequest(toRemove);
 
-            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(requestDeleteCommand);
+            IStatusGeneric resultUpdate = await sut.DataBaseOperationAsync(deleteWordRequestDeleteCommand);
 
             Assert.True(resultUpdate.IsValid);
 
