@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Security.Cryptography.X509Certificates;
 using Repository.Commands.Create;
 using Repository.Commands.Create.Users;
+using Repository.Commands.Read.Users;
 
 namespace Infrastructure.Authentication;
 

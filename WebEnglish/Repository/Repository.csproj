@@ -23,4 +23,9 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\Read\Words\" />
+    <Folder Include="Commands\Read\Users\" />
+  </ItemGroup>
+
 </Project>

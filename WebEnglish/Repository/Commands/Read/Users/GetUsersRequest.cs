@@ -1,10 +1,8 @@
 ﻿using DataBaseOperationHelper.BaseCommandsOperations.Reading;
 using Entities;
-using MediatR;
 using Repository.DTO;
-using StatusGeneric;
 
-namespace Repository.Commands.Read;
+namespace Repository.Commands.Read.Users;
 
 public record GetUsersRequest() : 
         ReadCommandRequest<User,UserDto>

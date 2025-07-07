@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using Repository.DTO;
 using StatusGeneric;
 
-namespace Repository.Commands.Update;
+namespace Repository.Commands.Update.Words;
 
 public record UpdateWordRequestHandler : IRequestHandler<RequestUpdateWordRequest, IStatusGeneric>
 {

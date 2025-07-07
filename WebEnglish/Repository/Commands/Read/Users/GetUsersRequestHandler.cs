@@ -4,33 +4,34 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Repository.Commands.Read.ReadService;
+using Repository.Commands.Read.Words;
 using Repository.DTO;
 using StatusGeneric;
 
-namespace Repository.Commands.Read;
+namespace Repository.Commands.Read.Users;
 
-internal record GetWordsRequestHandler : IRequestHandler<GetWordsRequest, IStatusGeneric<IEnumerable<WordDto>>>
+internal record GetUsersRequestHandler : IRequestHandler<GetUsersRequest, IStatusGeneric<IEnumerable<UserDto>>>
 {
     private readonly IServiceProvider _provider;
     private readonly ILogger<GetWordsRequestHandler> _logger;
 
-    public GetWordsRequestHandler(IServiceProvider provider, ILogger<GetWordsRequestHandler> logger)
+    public GetUsersRequestHandler(IServiceProvider provider, ILogger<GetWordsRequestHandler> logger)
     {
         _provider = provider;
         _logger = logger;
     }
 
-    public async Task<IStatusGeneric<IEnumerable<WordDto>>> Handle(GetWordsRequest request, CancellationToken cancellationToken)
+    public async Task<IStatusGeneric<IEnumerable<UserDto>>> Handle(GetUsersRequest request, CancellationToken cancellationToken)
     {
         _logger.LogInformation($"{request} Started");
-        var status = new StatusGenericHandler<IEnumerable<WordDto>>();
-        IEnumerable<WordDto> result = null!;
+        var status = new StatusGenericHandler<IEnumerable<UserDto>>();
+        IEnumerable<UserDto> result = null!;
         await using var scope = _provider.CreateAsyncScope();
         try
         {
             var query =
                 scope.ServiceProvider
-                    .GetRequiredService<IEntityCollection<Word>>().Get(request);
+                    .GetRequiredService<IEntityCollection<User>>().Get(request);
 
             if (!await query.AnyAsync(cancellationToken: cancellationToken))
             {
@@ -42,13 +43,13 @@ internal record GetWordsRequestHandler : IRequestHandler<GetWordsRequest, IStatu
                 .Select(x =>
                     new
                     {
-                        eng = x.EngWord,
-                        rus = x.RusWord,
+                        n = x.UserName,
+                        p = x.PasswordHash,
                         id = x.Id
                     }).ToListAsync(cancellationToken: cancellationToken);
 
             result = list
-                .Select(x => new WordDto(x.eng,x.rus, Id: x.id));
+                .Select(x => new UserDto(x.n, x.p, Id: x.id));
         }
         catch (Exception e)
         {
