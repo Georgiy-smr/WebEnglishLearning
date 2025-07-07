@@ -1,4 +1,5 @@
-﻿using DataBaseOperationHelper.Abstractions;
+﻿
+using DataBaseOperationHelper.Abstractions;
 
 namespace Entities;
 

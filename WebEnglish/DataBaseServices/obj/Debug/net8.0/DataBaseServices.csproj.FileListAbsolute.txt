@@ -58,5 +58,3 @@ C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\refint\DataBaseServices.dll
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\DataBaseServices.pdb
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\DataBaseServices\obj\Debug\net8.0\ref\DataBaseServices.dll
-C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\DataBaseOperationHelper.dll
-C:\Users\mrsmi\WebEnglishLearning\WebEnglish\DataBaseServices\bin\Debug\net8.0\DataBaseOperationHelper.pdb

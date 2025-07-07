@@ -52,5 +52,3 @@ C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.pdb
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ContextDataBase.genruntimeconfig.cache
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ContextDataBase\obj\Debug\net8.0\ref\ContextDataBase.dll
-C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\DataBaseOperationHelper.dll
-C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ContextDataBase\bin\Debug\net8.0\DataBaseOperationHelper.pdb

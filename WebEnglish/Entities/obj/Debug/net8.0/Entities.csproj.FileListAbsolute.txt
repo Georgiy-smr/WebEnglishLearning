@@ -34,7 +34,4 @@ C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Entities\obj\Debug\net8.0\
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Entities\obj\Debug\net8.0\ref\Entities.dll
-C:\Users\mrsmi\WebEnglishLearning\WebEnglish\Entities\bin\Debug\net8.0\DataBaseOperationHelper.dll
-C:\Users\mrsmi\WebEnglishLearning\WebEnglish\Entities\bin\Debug\net8.0\DataBaseOperationHelper.pdb
 C:\Users\mrsmi\WebEnglishLearning\WebEnglish\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
-C:\Users\mrsmi\WebEnglishLearning\WebEnglish\Entities\obj\Debug\net8.0\Entities.csproj.Up2Date

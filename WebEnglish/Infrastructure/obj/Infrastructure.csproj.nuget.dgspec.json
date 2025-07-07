@@ -124,6 +124,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "DataBaseOperationHelper": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -266,13 +272,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DataBaseOperationHelper": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "GenericServices.StatusGeneric": {
               "target": "Package",
               "version": "[1.2.0, )"
             },
             "MediatR": {
               "target": "Package",
-              "version": "[12.5.0, )"
+              "version": "[13.0.0, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",

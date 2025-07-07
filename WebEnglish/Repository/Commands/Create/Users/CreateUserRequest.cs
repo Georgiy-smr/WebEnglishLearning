@@ -1,6 +1,5 @@
-﻿using DataBaseOperationHelper.BaseCommandsOperations.Сreating;
-using Repository.DTO;
-
+﻿using Repository.DTO;
+using DataBaseOperationHelper.BaseCommandsOperations.Сreating;
 namespace Repository.Commands.Create.Users;
 
 public sealed record CreateUserRequest(UserDto NewUserDto) : Create<UserDto>(NewUserDto)

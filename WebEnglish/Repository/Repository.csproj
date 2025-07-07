@@ -7,20 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DataBaseOperationHelper" Version="1.0.0" />
     <PackageReference Include="GenericServices.StatusGeneric" Version="1.2.0" />
-    <PackageReference Include="MediatR" Version="12.5.0" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ContextDataBase\ContextDataBase.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="DataBaseOperationHelper">
-      <HintPath>..\..\..\DataBaseOperationHelper\bin\Debug\net8.0\DataBaseOperationHelper.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
