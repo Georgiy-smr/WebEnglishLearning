@@ -48,7 +48,10 @@ namespace DataBaseTests
 
             var sut = scope.ServiceProvider.GetRequiredService<IRepository>();
 
-            CreateUserRequest createCommand = new CreateUserRequest(new UserDto("MamkaTop", "2308"));
+            string newName = "topName" + Random.Shared.NextInt64(long.MaxValue);
+
+
+            CreateUserRequest createCommand = new CreateUserRequest(new UserDto(newName, "2308"));
 
             //Act
 
@@ -63,7 +66,7 @@ namespace DataBaseTests
             {
                 Filters = new List<Expression<Func<User, bool>>>()
                 {
-                    x => x.UserName == "MamkaTop" && x.PasswordHash == "2308"
+                    x => x.UserName == newName && x.PasswordHash == "2308"
                 },
                 Includes = new List<Expression<Func<User, object>>>(),
                 Size = 1,

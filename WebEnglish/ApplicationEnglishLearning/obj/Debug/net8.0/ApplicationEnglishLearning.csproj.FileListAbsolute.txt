@@ -540,3 +540,13 @@ C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\obj\Debug\net8.0\ApplicationEnglishLearning.pdb
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\obj\Debug\net8.0\ApplicationEnglishLearning.genruntimeconfig.cache
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\obj\Debug\net8.0\ref\ApplicationEnglishLearning.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\DataBaseOperationHelper.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\ApplicationEnglishLearning\bin\Debug\net8.0\DataBaseOperationHelper.pdb

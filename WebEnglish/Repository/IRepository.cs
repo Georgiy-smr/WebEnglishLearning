@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using DataBaseOperationHelper.Abstractions;
+using MediatR;
 using Repository.Commands;
 using Repository.DTO;
 using StatusGeneric;
@@ -26,7 +27,7 @@ public interface IRepository
             };
             return Task.FromResult<IStatusGeneric>(status);
         }
-        private static readonly Dictionary<Type, object> _samples = new()
+        private readonly Dictionary<Type, object> _samples = new()
         {
             { typeof(WordDto), new WordDto("hello", "привет", Id: 1, UserId: 42) },
             { typeof(UserDto), new UserDto("user1", "hash", Id: 1) }

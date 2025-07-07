@@ -1,4 +1,5 @@
-﻿using Repository.DTO;
+﻿using DataBaseOperationHelper.Abstractions;
+using Repository.DTO;
 
 namespace Repository.Commands.Update;
 

@@ -1576,10 +1576,7 @@
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
-          "ApplicationEnglishLearning.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ApplicationEnglishLearning.dll": {}
         }
       },
       "ContextDataBase/1.0.0": {
@@ -1589,10 +1586,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "9.0.6"
         },
         "runtime": {
-          "ContextDataBase.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ContextDataBase.dll": {}
         }
       },
       "DataBaseServices/1.0.0": {
@@ -1603,18 +1597,12 @@
           "Repository": "1.0.0"
         },
         "runtime": {
-          "DataBaseServices.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DataBaseServices.dll": {}
         }
       },
       "Entities/1.0.0": {
         "runtime": {
-          "Entities.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Entities.dll": {}
         }
       },
       "Infrastructure/1.0.0": {
@@ -1624,10 +1612,7 @@
           "Repository": "1.0.0"
         },
         "runtime": {
-          "Infrastructure.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Infrastructure.dll": {}
         }
       },
       "Repository/1.0.0": {
@@ -1639,8 +1624,13 @@
           "Microsoft.Extensions.DependencyInjection": "9.0.6"
         },
         "runtime": {
-          "Repository.dll": {
-            "assemblyVersion": "1.0.0",
+          "Repository.dll": {}
+        }
+      },
+      "DataBaseOperationHelper/1.0.0.0": {
+        "runtime": {
+          "DataBaseOperationHelper.dll": {
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -2611,6 +2601,11 @@
     },
     "Repository/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataBaseOperationHelper/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

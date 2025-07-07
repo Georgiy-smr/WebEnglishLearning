@@ -7800,24 +7800,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gosha and Anya\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mrsmi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\LogInTests\\LogInTests.csproj",
+      "projectUniqueName": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\LogInTests\\LogInTests.csproj",
       "projectName": "LogInTests",
-      "projectPath": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\LogInTests\\LogInTests.csproj",
-      "packagesPath": "C:\\Users\\Gosha and Anya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\LogInTests\\obj\\",
+      "projectPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\LogInTests\\LogInTests.csproj",
+      "packagesPath": "C:\\Users\\mrsmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\LogInTests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Gosha and Anya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\mrsmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7831,11 +7826,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj": {
-              "projectPath": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj"
+            "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj": {
+              "projectPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\ApplicationEnglishLearning.csproj"
             },
-            "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -7849,8 +7844,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -7889,7 +7883,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

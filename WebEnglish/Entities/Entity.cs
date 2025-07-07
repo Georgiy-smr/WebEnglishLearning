@@ -1,4 +1,6 @@
-﻿namespace Entities;
+﻿using DataBaseOperationHelper.Abstractions;
+
+namespace Entities;
 
 public abstract class Entity : IEntity
 {

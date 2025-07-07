@@ -1,32 +1,28 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
+      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
       "PackagePath": "staticwebassets\\Create.html"
     },
     {
-      "Id": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
+      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
       "PackagePath": "staticwebassets\\GetAll.html"
     },
     {
-      "Id": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
+      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
       "PackagePath": "staticwebassets\\Login.html"
     },
     {
-      "Id": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
+      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
       "PackagePath": "staticwebassets\\Register.html"
     },
     {
-      "Id": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
+      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
       "PackagePath": "staticwebassets\\Test.html"
     },
     {
-      "Id": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Words.html",
+      "Id": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Words.html",
       "PackagePath": "staticwebassets\\Words.html"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ApplicationEnglishLearning.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ApplicationEnglishLearning.Microsoft.AspNetCore.StaticWebAssets.props",

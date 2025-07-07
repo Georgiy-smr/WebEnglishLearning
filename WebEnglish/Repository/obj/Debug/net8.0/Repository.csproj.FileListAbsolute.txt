@@ -52,3 +52,5 @@ C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Repository\obj\Debug\net8.
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Repository\obj\Debug\net8.0\refint\Repository.dll
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Repository\obj\Debug\net8.0\Repository.pdb
 C:\Users\Gosha and Anya\WebEnglishLearning\WebEnglish\Repository\obj\Debug\net8.0\ref\Repository.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\Repository\bin\Debug\net8.0\DataBaseOperationHelper.dll
+C:\Users\mrsmi\WebEnglishLearning\WebEnglish\Repository\bin\Debug\net8.0\DataBaseOperationHelper.pdb

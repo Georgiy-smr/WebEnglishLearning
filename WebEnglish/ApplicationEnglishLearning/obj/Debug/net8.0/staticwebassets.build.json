@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SsM9XZlIGq0RE1Yyz9cqVgZyvtp3/7YVR0Ym4njy8JA=",
+  "Hash": "ea0zl6DH7kjpQnsCa0dULFaWRnT6UXQ6+J82VeD4UG8=",
   "Source": "ApplicationEnglishLearning",
   "BasePath": "_content/ApplicationEnglishLearning",
   "Mode": "Default",
@@ -10,631 +10,125 @@
     {
       "Name": "ApplicationEnglishLearning\\wwwroot",
       "Source": "ApplicationEnglishLearning",
-      "ContentRoot": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
-      "RelativePath": "Create#[.{fingerprint}]?.html",
+      "RelativePath": "Create.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "j7z9mkaecd",
-      "Integrity": "f+CdDMkEzGV+b/JkrCgouU0lnGvQJ6SjE7V+y5heJpk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Create.html"
     },
     {
-      "Identity": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
-      "RelativePath": "GetAll#[.{fingerprint}]?.html",
+      "RelativePath": "GetAll.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pkale5eu63",
-      "Integrity": "yYq7KwaArd43fGX0T6hS9+/rj4c/fUX+RInDIjkgEgA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\GetAll.html"
     },
     {
-      "Identity": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
-      "RelativePath": "Login#[.{fingerprint}]?.html",
+      "RelativePath": "Login.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "e8riayrju6",
-      "Integrity": "XtxiVXj4DEZ15VUjYmxw696AEq2NmtaLfsYwl8thzNs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Login.html"
     },
     {
-      "Identity": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
-      "RelativePath": "Register#[.{fingerprint}]?.html",
+      "RelativePath": "Register.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "28ai5qvikn",
-      "Integrity": "QkGVDiBCFEBmPjauvqrLCJfJZMwcGQpMyy/lsFMqu/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Register.html"
     },
     {
-      "Identity": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
-      "RelativePath": "Test#[.{fingerprint}]?.html",
+      "RelativePath": "Test.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vi1t20miac",
-      "Integrity": "986t2Fp0RE1WmMiEC+bWHBDe2YspwYk6s+12AqejbH0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Test.html"
     },
     {
-      "Identity": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Words.html",
+      "Identity": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Words.html",
       "SourceId": "ApplicationEnglishLearning",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mrsmi\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\",
       "BasePath": "_content/ApplicationEnglishLearning",
-      "RelativePath": "Words#[.{fingerprint}]?.html",
+      "RelativePath": "Words.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "iwj1iugxkf",
-      "Integrity": "/hqbQf9uK3fP/JtKx0z8f9jjrKyLvaQS6aiqCIlxHGM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Words.html"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "Create.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3041"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"f+CdDMkEzGV+b/JkrCgouU0lnGvQJ6SjE7V+y5heJpk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-f+CdDMkEzGV+b/JkrCgouU0lnGvQJ6SjE7V+y5heJpk="
-        }
-      ]
-    },
-    {
-      "Route": "Create.j7z9mkaecd.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Create.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3041"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"f+CdDMkEzGV+b/JkrCgouU0lnGvQJ6SjE7V+y5heJpk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "j7z9mkaecd"
-        },
-        {
-          "Name": "label",
-          "Value": "Create.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-f+CdDMkEzGV+b/JkrCgouU0lnGvQJ6SjE7V+y5heJpk="
-        }
-      ]
-    },
-    {
-      "Route": "GetAll.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6670"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yYq7KwaArd43fGX0T6hS9+/rj4c/fUX+RInDIjkgEgA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yYq7KwaArd43fGX0T6hS9+/rj4c/fUX+RInDIjkgEgA="
-        }
-      ]
-    },
-    {
-      "Route": "GetAll.pkale5eu63.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\GetAll.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6670"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yYq7KwaArd43fGX0T6hS9+/rj4c/fUX+RInDIjkgEgA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pkale5eu63"
-        },
-        {
-          "Name": "label",
-          "Value": "GetAll.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yYq7KwaArd43fGX0T6hS9+/rj4c/fUX+RInDIjkgEgA="
-        }
-      ]
-    },
-    {
-      "Route": "Login.e8riayrju6.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2574"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XtxiVXj4DEZ15VUjYmxw696AEq2NmtaLfsYwl8thzNs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e8riayrju6"
-        },
-        {
-          "Name": "label",
-          "Value": "Login.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-XtxiVXj4DEZ15VUjYmxw696AEq2NmtaLfsYwl8thzNs="
-        }
-      ]
-    },
-    {
-      "Route": "Login.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Login.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2574"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XtxiVXj4DEZ15VUjYmxw696AEq2NmtaLfsYwl8thzNs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-XtxiVXj4DEZ15VUjYmxw696AEq2NmtaLfsYwl8thzNs="
-        }
-      ]
-    },
-    {
-      "Route": "Register.28ai5qvikn.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2286"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QkGVDiBCFEBmPjauvqrLCJfJZMwcGQpMyy/lsFMqu/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "28ai5qvikn"
-        },
-        {
-          "Name": "label",
-          "Value": "Register.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QkGVDiBCFEBmPjauvqrLCJfJZMwcGQpMyy/lsFMqu/0="
-        }
-      ]
-    },
-    {
-      "Route": "Register.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Register.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2286"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QkGVDiBCFEBmPjauvqrLCJfJZMwcGQpMyy/lsFMqu/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-QkGVDiBCFEBmPjauvqrLCJfJZMwcGQpMyy/lsFMqu/0="
-        }
-      ]
-    },
-    {
-      "Route": "Test.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5744"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"986t2Fp0RE1WmMiEC+bWHBDe2YspwYk6s+12AqejbH0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-986t2Fp0RE1WmMiEC+bWHBDe2YspwYk6s+12AqejbH0="
-        }
-      ]
-    },
-    {
-      "Route": "Test.vi1t20miac.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Test.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5744"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"986t2Fp0RE1WmMiEC+bWHBDe2YspwYk6s+12AqejbH0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vi1t20miac"
-        },
-        {
-          "Name": "label",
-          "Value": "Test.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-986t2Fp0RE1WmMiEC+bWHBDe2YspwYk6s+12AqejbH0="
-        }
-      ]
-    },
-    {
-      "Route": "Words.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Words.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1864"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/hqbQf9uK3fP/JtKx0z8f9jjrKyLvaQS6aiqCIlxHGM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/hqbQf9uK3fP/JtKx0z8f9jjrKyLvaQS6aiqCIlxHGM="
-        }
-      ]
-    },
-    {
-      "Route": "Words.iwj1iugxkf.html",
-      "AssetFile": "C:\\Users\\Gosha and Anya\\WebEnglishLearning\\WebEnglish\\ApplicationEnglishLearning\\wwwroot\\Words.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1864"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/hqbQf9uK3fP/JtKx0z8f9jjrKyLvaQS6aiqCIlxHGM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 05 Jul 2025 07:34:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "iwj1iugxkf"
-        },
-        {
-          "Name": "label",
-          "Value": "Words.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/hqbQf9uK3fP/JtKx0z8f9jjrKyLvaQS6aiqCIlxHGM="
-        }
-      ]
     }
   ]
 }

@@ -17,4 +17,10 @@
     <ProjectReference Include="..\Entities\Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="DataBaseOperationHelper">
+      <HintPath>..\..\..\DataBaseOperationHelper\bin\Debug\net8.0\DataBaseOperationHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

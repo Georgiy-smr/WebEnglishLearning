@@ -1,13 +1,13 @@
-﻿using Entities;
+﻿using DataBaseOperationHelper.BaseCommandsOperations.Reading;
+using Entities;
 using MediatR;
 using Repository.DTO;
 using StatusGeneric;
 
 namespace Repository.Commands.Read;
 
-public record GetUsersRequest() :
-    ReadCommand<User>,
-    IRequest<IStatusGeneric<IEnumerable<UserDto>>>
+public record GetUsersRequest() : 
+        ReadCommandRequest<User,UserDto>
 {
     public override string ToString()
     {
