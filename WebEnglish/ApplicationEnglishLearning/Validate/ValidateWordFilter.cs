@@ -8,7 +8,7 @@ public class ValidateWordFilter : IActionFilter
 {
     public void OnActionExecuting(ActionExecutingContext context)
     {
-        if (context.ActionArguments.TryGetValue("word", out var value) && value is WordFromDictionary word)
+        if (context.ActionArguments.TryGetValue("WordFromDictionary", out var value) && value is WordFromDictionary word)
         {
             if (word.EnglishWord.Contains('#') || word.RussianWord.Contains('#'))
             {

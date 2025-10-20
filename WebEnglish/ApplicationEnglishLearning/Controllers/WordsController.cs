@@ -179,6 +179,7 @@ namespace ApplicationEnglishLearning.Controllers
 
         [HttpPut("TestWord")]
         public async Task<IActionResult> PostTestWord([FromBody] WordToTest wordToTest)
+        
         {
             if (!ModelState.IsValid)
             {
@@ -199,5 +200,33 @@ namespace ApplicationEnglishLearning.Controllers
 
             return Ok(resultGet.IsValid);
         }
+
+
+        [HttpPut("TestEnglishTranslate")]
+        public async Task<IActionResult> PostEnglishTranslate([FromBody] WordToTest wordToTest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            IStatusGeneric<IEnumerable<WordDto>> resultGet = await _repository.GetItemsAsync(new GetWordsRequest()
+            {
+                Filters = new List<Expression<Func<Word, bool>>>()
+                {
+                    x => x.RusWord == wordToTest.RussianWord
+                },
+                Includes = new List<Expression<Func<Word, object>>>(),
+                Size = 1,
+                ZeroStart = 0
+            });
+
+            string rusOrig = resultGet.Result.Single().Eng.ToLower().Trim();
+            string rusTest = wordToTest.EnglishWord.ToLower().Trim();
+
+            return Ok(rusOrig == rusTest);
+        }
+
+
     }
 }
