@@ -42,10 +42,15 @@
         <button id="create">
             Создать
         </button>
-        
+
         <button id="test">
-            Проверка
+            Перевести с англ.
         </button>
+
+	    <button id="test2">
+		    Перевести на англ.
+	    </button>
+
 
     </div>
 
@@ -70,7 +75,11 @@
 
     document.getElementById('test').addEventListener('click', () => {
         window.location.href = 'https://192.168.1.125:7041/Test.html';
-        });
+    });
+
+    document.getElementById('test2').addEventListener('click', () => {
+        window.location.href = 'https://192.168.1.125:7041/Test2.html';
+    });
 
     </script>
 </body>

@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Слова</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #wordsList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Получить задание с переводом</h1>
+
+	<button id="loadTest">Получить задание</button>
+
+	<div id="testContainer"></div>
+
+	<input id="translate"/>
+
+    <button id="sendAnswer" disabled>Отправить ответ</button>
+
+    <div id="response"></div>
+<script>
+
+        function getCookie(name) {
+            const cookie = document.cookie
+                .split('; ')
+                .find(row => row.startsWith(name + '='));
+            return cookie ? cookie.split('=')[1] : null;
+        }
+
+
+	    let currentRussianWord = '';
+        let translateRussian = '';
+
+        document.getElementById('loadTest').addEventListener('click', () => {
+
+            const tokenFromCookie = getCookie('jwt');
+            const tokenFromStorage = localStorage.getItem('jwtToken'); // или sessionStorage.getItem
+
+            var token = "";
+            if (tokenFromCookie)
+                token = tokenFromCookie;
+            else if (tokenFromStorage)
+                token = tokenFromStorage;
+            else {
+                alert('Залогинься!');
+            }
+
+
+            fetch('https://192.168.1.125:7041/Words/GetTestedWords/1',
+                {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Authorization': 'Bearer ' + token
+                    }
+                })
+                .then(response => {
+
+                    if (response.status === 401) {
+                        window.location.href = 'https://192.168.1.125:7041/login.html';
+                        return;
+                    }
+
+                    if (!response.ok) throw new Error('Ошибка сети: ' + response.status);
+                    return response.json();
+                })
+                .then(data => {
+
+
+                    if (data.length === 0) {
+                        alert('Нет слов для теста');
+                        return;
+                    }
+
+                    currentRussianWord = data[0].russianWord; // все одинаковы
+
+                    const container = document.getElementById('testContainer');
+                    container.innerHTML = ''; // очистить
+
+
+                    console.log("Обработка данных с сервера");
+
+                    // Покажем русское слово
+                    const title = document.createElement('h3');
+                    title.textContent = `Введите перевод для слова "${currentRussianWord}":`;
+                    container.appendChild(title);
+
+                    //отчистим поле ввода
+                    const textElement = document.getElementById('translate');
+                    textElement.value = "";
+
+                    //изменить активность кнопки
+                    textElement.addEventListener('input', () => {
+
+                        const SendButton = document.getElementById('sendAnswer');
+                        translateRussian = textElement.value.trim();
+                        SendButton.disabled = !translateRussian;
+                    });
+
+
+                   
+                    document.getElementById('sendAnswer').disabled = true;
+                    document.getElementById('response').textContent = '';
+                })
+                .catch(err => {
+                    alert('Ошибка при загрузке данных: ' + err.message);
+                });
+        });
+    document.getElementById('sendAnswer').addEventListener('click', () => {
+        const transWord = document.getElementById('translate').value;
+        if (!transWord) {
+            alert('Пожалуйста, введите перевод слова "${currentRussianWord}"');
+            return;
+        }
+           
+        fetch('https://192.168.1.125:7041/Words/TestEnglishTranslate', {
+                method: 'PUT',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    englishWord: translateRussian,
+                    russianWord: currentRussianWord
+                })
+            })
+                .then(res => {
+                    if (!res.ok) throw new Error('Ошибка сети: ' + res.status);
+                    return res.json();
+                })
+                .then(result => {
+                    document.getElementById('response').textContent = 'Ответ отправлен. Результат: ' + JSON.stringify(result);
+
+                    if (result)
+                        document.getElementById('loadTest').click();
+                })
+                .catch(err => {
+                    document.getElementById('response').textContent = 'Ошибка при отправке: ' + err.message;
+                });
+        });
+
+
+
+    </script>
+</body>
+</html>
+
